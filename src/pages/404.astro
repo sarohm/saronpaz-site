@@ -1,0 +1,10 @@
+---
+import { u } from '../lib/url';
+import Base from '../layouts/Base.astro';
+---
+<Base title="Not found">
+  <section class="wrap" style="text-align:center;padding:100px 0 40px">
+    <h1 class="giant">Lost?</h1>
+    <p style="color:var(--muted)">This page doesn’t exist (anymore). <a href={u("/")} style="border-bottom:1px solid #ccc">Back home</a>.</p>
+  </section>
+</Base>

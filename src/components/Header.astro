@@ -1,0 +1,83 @@
+---
+import { u } from '../lib/url';
+import { getCollection } from 'astro:content';
+import site from '../data/site.json';
+
+const projects = await getCollection('projects');
+const pages = await getCollection('pages');
+const resolve = (ref: string) => {
+  if (ref.startsWith('page:')) {
+    const p = pages.find((x) => x.id === ref.slice(5));
+    return p && { title: p.data.title, href: `/${p.id}/` };
+  }
+  const p = projects.find((x) => x.id === ref);
+  return p && { title: p.data.title, href: `/portfolio/${p.id}/` };
+};
+const menu = site.menu.map((g: any) => ({
+  title: g.title,
+  href: g.href,
+  items: (g.items ?? []).map(resolve).filter(Boolean),
+}));
+---
+<header class="site-header" id="top">
+  <a href={u("/")} class="logo" aria-label="Saron Paz — home">
+    <img src={u(site.logo)} alt="Saron Paz, experience design" width="120" height="120" />
+  </a>
+  <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<nav id="site-menu" class="menu" aria-label="Main" hidden>
+  <button class="close" aria-label="Close menu">×</button>
+  <ul class="groups">
+    {menu.map((g) => (
+      <li>
+        {g.href ? (
+          <a class="group-title" href={u(g.href)}>{g.title}</a>
+        ) : (
+          <details>
+            <summary class="group-title">{g.title}</summary>
+            <ul>
+              {g.items.map((it: any) => <li><a href={u(it.href)}>{it.title}</a></li>)}
+            </ul>
+          </details>
+        )}
+      </li>
+    ))}
+  </ul>
+  <p class="credit">© Saron Paz</p>
+</nav>
+
+<script>
+  const menu = document.getElementById('site-menu')!;
+  const burger = document.querySelector<HTMLButtonElement>('.burger')!;
+  const open = (on: boolean) => {
+    menu.hidden = !on;
+    burger.setAttribute('aria-expanded', String(on));
+    document.body.style.overflow = on ? 'hidden' : '';
+  };
+  burger.addEventListener('click', () => open(true));
+  menu.querySelector('.close')!.addEventListener('click', () => open(false));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') open(false); });
+</script>
+
+<style>
+  .site-header { display: flex; justify-content: space-between; align-items: center; padding: 18px 36px; }
+  .logo img { width: 96px; height: 96px; object-fit: contain; }
+  .burger { background: none; border: 0; cursor: pointer; padding: 10px; display: grid; gap: 4px; }
+  .burger span { display: block; width: 20px; height: 2px; background: var(--ink); }
+  .menu { position: fixed; inset: 0 0 0 auto; width: min(360px, 100%); background: var(--dark); color: #fff; z-index: 50; overflow-y: auto; padding: 72px 40px 36px; box-shadow: -10px 0 40px rgba(0,0,0,.25); }
+  .menu[hidden] { display: none; }
+  .close { position: absolute; top: 18px; right: 22px; background: none; border: 0; color: #fff; font-size: 34px; line-height: 1; cursor: pointer; }
+  .groups, .groups ul { list-style: none; margin: 0; padding: 0; }
+  .group-title { font-family: var(--sans); font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; display: block; padding: 9px 0; cursor: pointer; list-style: none; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: ' +'; opacity: .5; }
+  details[open] summary::after { content: ' –'; }
+  details ul { padding: 2px 0 12px 14px; }
+  details li a { font-family: var(--serif); font-size: 17px; display: block; padding: 3px 0; opacity: .75; }
+  details li a:hover, .group-title:hover { opacity: 1; color: #fff; }
+  .credit { margin-top: 36px; font-size: 12px; opacity: .5; }
+  @media (max-width: 700px) { .site-header { padding: 14px 20px; } .logo img { width: 72px; height: 72px; } }
+</style>

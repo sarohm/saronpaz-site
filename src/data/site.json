@@ -1,0 +1,242 @@
+{
+  "title": "Saron Paz",
+  "description": "Experience Design, New Media Art, Place Making",
+  "logo": "/images/home/logo.webp",
+  "heroLines": [
+    "SaronPaz",
+    "ExperienceDesign",
+    "NewMediaArt",
+    "PlaceMaking"
+  ],
+  "hero": [
+    "/images/home/hero-00.webp",
+    "/images/home/hero-01.webp",
+    "/images/home/hero-02.webp",
+    "/images/home/hero-03.webp",
+    "/images/home/hero-04.webp",
+    "/images/home/hero-05.webp",
+    "/images/home/hero-06.webp",
+    "/images/home/hero-07.webp",
+    "/images/home/hero-08.webp",
+    "/images/home/hero-09.webp",
+    "/images/home/hero-10.webp",
+    "/images/home/hero-11.webp",
+    "/images/home/hero-12.webp",
+    "/images/home/hero-13.webp"
+  ],
+  "about": {
+    "title": "About",
+    "ticker": "Ranging from products & objects to spaces, events and interactive installations,",
+    "text": "We try to focus our efforts on creating a meaningful user experiences."
+  },
+  "talkToUs": "We accept challenging commissions as well as initiate our own adventures. We enjoy collaborating with friends and new acquaintances. We happily combine work & play. We like surprises, thrilled by restrictions and do our best to keep ourselves and the people around us fairly entertained.",
+  "contact": {
+    "title": "Let's talk.",
+    "city": "Tel Aviv",
+    "address": "3 Shvil Hmeretz St. building 8 2nd floor, Kiriat Hamelacha, Tel Aviv.",
+    "phone": "+972(0)528387536",
+    "email": "saronpaz@gmail.com",
+    "pitchTitle": "Start your Project",
+    "pitch": "We thrive when coming up with innovative ideas but also understand that a smart concept should be supported with measurable results."
+  },
+  "sections": [
+    {
+      "id": "experiences",
+      "title": "Experiences"
+    },
+    {
+      "id": "experiments",
+      "title": "Experiments"
+    },
+    {
+      "id": "expeditions",
+      "title": "Expeditions"
+    }
+  ],
+  "talented": [
+    {
+      "name": "Dunne & Raby",
+      "image": "/images/talented/dunne-raby.webp"
+    },
+    {
+      "name": "Glithero",
+      "image": "/images/talented/glithero.webp"
+    },
+    {
+      "name": "Random International",
+      "image": "/images/talented/random-international.webp"
+    },
+    {
+      "name": "Roman Singer",
+      "image": "/images/talented/roman-singer.webp"
+    },
+    {
+      "name": "Noam Toran",
+      "image": "/images/talented/noam-toran.webp"
+    },
+    {
+      "name": "Nelly Ben Hayoun",
+      "image": "/images/talented/nelly-ben-hayoun.webp"
+    },
+    {
+      "name": "Michael Sailstorfer",
+      "image": "/images/talented/michael-sailstorfer.webp"
+    },
+    {
+      "name": "Maywa Denki",
+      "image": "/images/talented/maywa-denki.webp"
+    },
+    {
+      "name": "Marti Guixe",
+      "image": "/images/talented/marti-guixe.webp"
+    },
+    {
+      "name": "Maarten Baas",
+      "image": ""
+    },
+    {
+      "name": "Graffiti Research Lab",
+      "image": "/images/talented/graffiti-research-lab.webp"
+    },
+    {
+      "name": "Olafur Eliasson",
+      "image": "/images/talented/olafur-eliasson.webp"
+    },
+    {
+      "name": "Domestic Data Streamers",
+      "image": "/images/talented/domestic-data-streamers.webp"
+    },
+    {
+      "name": "Zach Gage",
+      "image": "/images/talented/zach-gage.webp"
+    },
+    {
+      "name": "Tim Hunkin",
+      "image": "/images/talented/tim-hunkin.webp"
+    },
+    {
+      "name": "Jason Eppink",
+      "image": ""
+    },
+    {
+      "name": "Sophie Calle",
+      "image": "/images/talented/sophie-calle.webp"
+    },
+    {
+      "name": "Extrapolation Factory",
+      "image": "/images/talented/extrapolation-factory.webp"
+    }
+  ],
+  "menu": [
+    {
+      "title": "Installations",
+      "items": [
+        "doppelganger",
+        "letraset",
+        "solidsilhouette",
+        "tiptone",
+        "deusexmachina",
+        "spacedout",
+        "bitween"
+      ]
+    },
+    {
+      "title": "Systems",
+      "items": [
+        "actionpainter",
+        "boomshack",
+        "thinktank",
+        "simonsays",
+        "showtell",
+        "boombox"
+      ]
+    },
+    {
+      "title": "Events",
+      "items": [
+        "houseproud",
+        "guerillagreen",
+        "brainmatters-2",
+        "musraramix",
+        "dutyfree"
+      ]
+    },
+    {
+      "title": "Platforms",
+      "items": [
+        "pointofview",
+        "backoffice",
+        "storystore",
+        "commonsense",
+        "sitespecific-2",
+        "piecederesistance",
+        "massmess",
+        "takeaway"
+      ]
+    },
+    {
+      "title": "Objects",
+      "items": [
+        "intercourse",
+        "mischief",
+        "priceless",
+        "leapoffaith",
+        "userfriendly",
+        "haphazard",
+        "sideeffect"
+      ]
+    },
+    {
+      "title": "Plans",
+      "items": [
+        "eyecandy",
+        "dotdotdot",
+        "takeaway",
+        "pacmanman",
+        "saysomething-2"
+      ]
+    },
+    {
+      "title": "Ideas",
+      "items": [
+        "page:meanstonoend",
+        "misuse"
+      ]
+    },
+    {
+      "title": "Where’sWhere",
+      "href": "/contact-creative/"
+    },
+    {
+      "title": "What’sWhat",
+      "items": [
+        "page:experience-consultancy",
+        "page:experience-design",
+        "page:experience-rd"
+      ]
+    }
+  ],
+  "tagOrder": [
+    "Consumer X",
+    "Event X",
+    "Material X",
+    "Musical X",
+    "Play X",
+    "Public X",
+    "Spiritual X",
+    "Tech X",
+    "Space X",
+    "User X",
+    "Creative X",
+    "Learning X",
+    "Social X",
+    "Cultural X",
+    "Emotional X",
+    "Historical X",
+    "Culinnary X",
+    "Retail X",
+    "Work X",
+    "Risky X",
+    "Touristic X"
+  ]
+}

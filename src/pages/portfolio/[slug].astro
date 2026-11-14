@@ -1,0 +1,103 @@
+---
+import { u } from '../../lib/url';
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Videos from '../../components/Videos.astro';
+import Gallery from '../../components/Gallery.astro';
+
+export async function getStaticPaths() {
+  const all = (await getCollection('projects')).sort((a, b) => a.data.order - b.data.order);
+  return all.map((p, i) => ({
+    params: { slug: p.id },
+    props: {
+      project: p,
+      prev: all[(i - 1 + all.length) % all.length],
+      next: all[(i + 1) % all.length],
+      related: all.filter((x) => x.id !== p.id && x.data.category && x.data.category === p.data.category && x.data.thumb).slice(0, 3),
+    },
+  }));
+}
+
+const { project, prev, next, related } = Astro.props;
+const { Content } = await render(project);
+const d = project.data;
+const details = [
+  ['Experiences', d.experiences.join(', ')],
+  ['Category', d.category],
+  ['Client', d.client],
+  ['Year', d.year],
+].filter(([, v]) => v);
+const firstPara = (project.body ?? '').split('\n\n').find((x) => x.length > 60) ?? '';
+---
+<Base title={d.title} description={firstPara.slice(0, 160)} image={d.header || d.thumb}>
+  {d.header && <div class="banner" style={`background-image:url('${u(d.header)}')`} role="img" aria-label=""></div>}
+
+  <article class="wrap project">
+    <div class="text">
+      <h1>{d.title}</h1>
+      {d.subtitle && <p class="subtitle">{d.subtitle}</p>}
+      <div class="body"><Content /></div>
+    </div>
+    {details.length > 0 && (
+      <aside class="details">
+        <dl>
+          {details.map(([k, v]) => (<><dt>{k}</dt><dd>{v}</dd></>))}
+        </dl>
+      </aside>
+    )}
+  </article>
+
+  <div class="media wrap">
+    <Videos videos={d.videos} title={d.title} />
+    <Gallery images={d.gallery} title={d.title} />
+  </div>
+
+  {related.length > 0 && (
+    <section class="related wrap">
+      <h2 class="eyebrow">Related works</h2>
+      <div class="rel-grid">
+        {related.map((r) => (
+          <a href={u(`/portfolio/${r.id}/`)}>
+            <img src={u(r.data.thumb)} alt="" loading="lazy" decoding="async" />
+            <h3>{r.data.title}</h3>
+          </a>
+        ))}
+      </div>
+    </section>
+  )}
+
+  <nav class="pager" aria-label="More projects">
+    <a href={u(`/portfolio/${prev.id}/`)} class="eyebrow">‹ Prev <span>{prev.data.title}</span></a>
+    <a href={u(`/portfolio/${next.id}/`)} class="eyebrow">Next <span>{next.data.title}</span> ›</a>
+  </nav>
+</Base>
+
+<style>
+  .banner { height: 300px; background-size: cover; background-position: center; filter: saturate(.9); }
+  .project { display: grid; grid-template-columns: 2fr 1fr; gap: 72px; padding-top: 72px; padding-bottom: 54px; }
+  h1 { font-family: var(--body); font-weight: 600; font-size: 29px; margin: 0 0 22px; }
+  .body { color: var(--muted); font-weight: 300; }
+  .body :global(p) { margin: 0 0 18px; }
+  .subtitle { font-family: var(--serif); font-style: italic; font-size: 20px; margin: -10px 0 18px; }
+  .details { padding-top: 64px; }
+  dl { display: grid; grid-template-columns: auto 1fr; gap: 6px 22px; margin: 0; font-size: 15px; line-height: 1.6; padding-bottom: 26px; border-bottom: 1px solid var(--line); }
+  dt { font-weight: 600; }
+  dd { margin: 0; color: var(--muted); }
+  .media { padding-bottom: 40px; }
+  .related { padding: 50px 36px 40px; text-align: center; }
+  .related h2 { margin: 0 0 30px; }
+  .rel-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px; text-align: left; }
+  .rel-grid img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+  .rel-grid h3 { font-family: var(--body); font-weight: 600; font-size: 15px; margin: 12px 0 0; }
+  .rel-grid a:hover img { opacity: .85; }
+  .pager { display: flex; justify-content: space-between; background: var(--soft); border-top: 1px solid var(--line); padding: 22px 36px; margin-bottom: -90px; }
+  .pager span { font-family: var(--serif); text-transform: none; letter-spacing: 0; font-size: 15px; font-weight: 700; margin: 0 6px; }
+  @media (max-width: 800px) {
+    .banner { height: 180px; }
+    .project { grid-template-columns: 1fr; gap: 10px; padding-top: 44px; }
+    .details { padding-top: 0; }
+    .rel-grid { grid-template-columns: 1fr 1fr; gap: 18px; }
+    .rel-grid a:nth-child(3) { display: none; }
+    .pager span { display: none; }
+  }
+</style>

@@ -1,0 +1,45 @@
+---
+// Light YouTube/Vimeo embeds: only a thumbnail loads until the visitor clicks play.
+interface Props { videos: string[]; title: string }
+const { videos, title } = Astro.props;
+const items = videos.map((v) =>
+  v.startsWith('vimeo:')
+    ? { kind: 'vimeo', id: v.slice(6), thumb: '', embed: `https://player.vimeo.com/video/${v.slice(6)}?autoplay=1` }
+    : { kind: 'youtube', id: v, thumb: `https://i.ytimg.com/vi/${v}/hqdefault.jpg`, embed: `https://www.youtube-nocookie.com/embed/${v}?autoplay=1&rel=0` },
+);
+---
+{items.length > 0 && (
+  <div class="videos" data-count={Math.min(items.length, 3)}>
+    {items.map((v, i) => (
+      <button class="video" data-embed={v.embed} aria-label={`Play video ${i + 1}: ${title}`}>
+        {v.thumb && <img src={v.thumb} alt="" loading="lazy" decoding="async" />}
+        <span class="play" aria-hidden="true"></span>
+      </button>
+    ))}
+  </div>
+)}
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>('.video').forEach((b) => {
+    b.addEventListener('click', () => {
+      const f = document.createElement('iframe');
+      f.src = b.dataset.embed!;
+      f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+      f.allowFullscreen = true;
+      f.title = b.getAttribute('aria-label') ?? 'video';
+      b.replaceWith(f);
+      f.classList.add('video');
+    }, { once: true });
+  });
+</script>
+
+<style>
+  .videos { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 36px; margin: 0 0 36px; }
+  .videos[data-count='1'] { grid-template-columns: minmax(0, 900px); justify-content: center; }
+  :global(.video) { position: relative; aspect-ratio: 16 / 9; width: 100%; border: 0; padding: 0; background: #000; cursor: pointer; overflow: hidden; display: block; }
+  .video img { width: 100%; height: 100%; object-fit: cover; opacity: .9; transition: opacity .2s; }
+  .video:hover img { opacity: 1; }
+  .play { position: absolute; inset: 0; margin: auto; width: 64px; height: 44px; background: rgba(20, 22, 24, .85); border-radius: 10px; }
+  .play::after { content: ''; position: absolute; left: 26px; top: 13px; border-left: 16px solid #fff; border-top: 9px solid transparent; border-bottom: 9px solid transparent; }
+  .video:hover .play { background: #e00; }
+</style>

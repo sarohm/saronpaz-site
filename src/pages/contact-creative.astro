@@ -1,0 +1,33 @@
+---
+// "Where'sWhere" — kept at the old address so existing links still work.
+import Base from '../layouts/Base.astro';
+import site from '../data/site.json';
+const c = site.contact;
+---
+<Base title="Where’sWhere">
+  <section class="wrap contact">
+    <h1 class="giant">{c.title}</h1>
+    <div class="cols">
+      <div>
+        <p class="eyebrow">{c.city}</p>
+        <p>{c.address}</p>
+        <p>Tel: <a href={`tel:${c.phone.replace(/[^+\d]/g, '').replace('+9720', '+972')}`}>{c.phone}</a></p>
+        <p>Email: <a href={`mailto:${c.email}`}>{c.email}</a></p>
+      </div>
+      <div>
+        <p class="eyebrow">{c.pitchTitle}</p>
+        <p>{c.pitch}</p>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .contact { padding-top: 80px; }
+  .giant { font-size: clamp(56px, 11vw, 150px); }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; max-width: 900px; margin: 72px auto 0; }
+  p { color: var(--muted); margin: 0 0 8px; }
+  .eyebrow { color: var(--ink); margin-bottom: 16px; }
+  a { border-bottom: 1px solid #ccc; }
+  @media (max-width: 700px) { .cols { grid-template-columns: 1fr; gap: 36px; } }
+</style>

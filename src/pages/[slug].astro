@@ -1,0 +1,36 @@
+---
+import { u } from '../lib/url';
+// Service pages (Experience Consultancy / Design / R&D) and the MeansToNoEnd book page.
+import { getCollection, render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import Gallery from '../components/Gallery.astro';
+
+export async function getStaticPaths() {
+  const all = (await getCollection('pages')).sort((a, b) => a.data.order - b.data.order);
+  return all.map((p, i) => ({
+    params: { slug: p.id },
+    props: { page: p, prev: all[(i - 1 + all.length) % all.length], next: all[(i + 1) % all.length] },
+  }));
+}
+const { page, prev, next } = Astro.props;
+const { Content } = await render(page);
+---
+<Base title={page.data.title} description={(page.body ?? '').split('\n\n')[0].slice(0, 160)}>
+  <div class="band"><h1>{page.data.title}</h1></div>
+  <article class="wrap body"><Content /></article>
+  {page.data.gallery.length > 0 && <div class="wrap"><Gallery images={page.data.gallery} title={page.data.title} /></div>}
+  <nav class="pager" aria-label="More">
+    <a href={u(`/${prev.id}/`)} class="eyebrow">‹ Prev <span>{prev.data.title}</span></a>
+    <a href={u(`/${next.id}/`)} class="eyebrow">Next <span>{next.data.title}</span> ›</a>
+  </nav>
+</Base>
+
+<style>
+  .band { background: var(--dark); color: #fff; text-align: center; padding: 96px 20px; }
+  h1 { font-family: var(--body); font-weight: 600; font-size: 35px; margin: 0; }
+  .body { color: var(--muted); font-weight: 300; padding-top: 44px; padding-bottom: 44px; max-width: 1000px; }
+  .body :global(p) { margin: 0 0 18px; }
+  .pager { display: flex; justify-content: space-between; background: var(--soft); border-top: 1px solid var(--line); padding: 22px 36px; margin-top: 30px; margin-bottom: -90px; }
+  .pager span { font-family: var(--serif); text-transform: none; letter-spacing: 0; font-size: 15px; font-weight: 700; margin: 0 6px; }
+  @media (max-width: 700px) { .band { padding: 60px 20px; } h1 { font-size: 28px; } .pager span { display: none; } }
+</style>

@@ -1,0 +1,47 @@
+---
+import { u } from '../lib/url';
+import '@fontsource/playfair-display/400.css';
+import '@fontsource/playfair-display/700.css';
+import '@fontsource/playfair-display/900.css';
+import '@fontsource/poppins/600.css';
+import '@fontsource/poppins/700.css';
+import '@fontsource/hind/300.css';
+import '@fontsource/hind/400.css';
+import '@fontsource/hind/600.css';
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import site from '../data/site.json';
+
+interface Props { title?: string; description?: string; image?: string }
+const { title, description = site.description, image } = Astro.props;
+const fullTitle = title ? `${title} - ${site.title}` : `${site.title} - ${site.description}`;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const ogImage = image ? new URL(image, Astro.site).href : undefined;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href={u(site.logo)} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    {ogImage && <meta property="og:image" content={ogImage} />}
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+  <body>
+    <Header />
+    <main><slot /></main>
+    <Footer />
+    <a href="#top" class="to-top" aria-label="Back to top">↑</a>
+    <style>
+      .to-top { position: fixed; right: 18px; bottom: 18px; width: 34px; height: 34px; display: grid; place-items: center; background: var(--ink); color: #fff; border-radius: 2px; font-size: 14px; opacity: .85; z-index: 20; }
+      .to-top:hover { opacity: 1; }
+    </style>
+  </body>
+</html>
