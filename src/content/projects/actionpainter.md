@@ -21,7 +21,11 @@ The ActionPainter is also a way to use a smartphone as more than a small screen 
 
 We are constantly improving the ActionPainter – adding new brushes and features.
 
-The ActionPainter was first developed as part of the DevArt project – A joint commission by Google Israel and Fresh Paint Art Fair in Tel Aviv
+The ActionPainter was first developed as part of the DevArt project – A joint commission by Google Israel and [Fresh Paint Art Fair](http://www.freshpaint.co.il/en/fresh-paint) in Tel Aviv
+
+Since then the ActionPainter has been shown at Google Zeitgeist London, Google NY, Google Korea and the MusraraMix Festival.
+
+We also got a chance to play with the ActionPainter on live national TV.
 
 Even the president of Israel Shimon Peres had the pleasure of trying out the ActionPainter (and loved every minute).
 

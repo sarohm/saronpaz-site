@@ -10,7 +10,7 @@ client: "Klarna"
 year: "2017"
 thumb: "/images/backoffice/thumb.webp"
 header: "/images/backoffice/header.webp"
-videos: ["4_8x-MhT5Mc", "EvQlcpUETb0", "zaYPFNfkfFs", "Y4dNcecEigI", "fWMs9Jm4juk"]
+videos: ["4_8x-MhT5Mc", "EvQlcpUETb0", "zaYPFNfkfFs", "Y4dNcecEigI", "fWMs9Jm4juk", "62CbaZLPa3g"]
 gallery: []
 ---
 BackOffice is an open lab for corporate employee engagement possibilities and a disruptive look into office work culture.
@@ -21,6 +21,6 @@ BackOffice is a part of a joint effort to create an international community of m
 
 We hope to continue to explore new means of employee engagement and the connection between corporate, creativity, Technology and experience in other companies in the future.
 
-Special thanks to KLARNA that allowed us to come in and play. 
+Special thanks to [KLARNA](http://www.klarnaisrael.com/) that allowed us to come in and play. 
 
 This project couldn’t have come to life without the help of Nadav Kaddar.

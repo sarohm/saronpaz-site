@@ -20,3 +20,5 @@ The urban space is full of visual interventions and legal restrictions which are
 LetraSet allows any passerby to express his or her mood using text . Any cell phone owner is invited to send a 7-character text message that will appear on the huge billboard in the heart of the city, without any censorship.
 
 Random messages, opinions, thoughts, and musings presented for all to see without any hierarchy .Positioning the work in Jerusalem adds to its validity; In a city with multiple views and ideas LetraSet gives residents and visitors a peephole to an authentic state of mind in real time, one opinion at a time.
+
+LetraSet was commissioned by the [Hansen centre](http://hansen.co.il/) for design media & technology, 2013.

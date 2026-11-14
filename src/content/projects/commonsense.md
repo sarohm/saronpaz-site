@@ -16,3 +16,5 @@ gallery: ["/images/commonsense/001.webp", "/images/commonsense/002.webp", "/imag
 This interactive installation generates a dynamic eco-system, consisting of the audience’s thoughts. By using the application, every participant can create his own organism, which consists of an icon, a color and a word. This organism is charged with personal meaning, as it is joins the collective group of organisms, thus altering the collective action and its diverse meanings.
 
 This project was done in collaboration with Eyal Gruss
+
+CommonSense was commissioned by the Fishman Group & Fresh Paint art fair, Tel Aviv, 2014.

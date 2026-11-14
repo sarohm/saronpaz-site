@@ -14,3 +14,5 @@ videos: ["agfozWNexCs"]
 gallery: []
 ---
 BoomShack is a social percussion instrument. Using a controlled set of electronic drumsticks, the audience is invited to play around with the beats that resonate from everyday objects and join together in group harmony.
+
+BoomShack was commissioned by Sounds In The Old City Festival, Jerusalem 2017.

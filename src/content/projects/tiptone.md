@@ -16,3 +16,5 @@ gallery: ["/images/tiptone/001.webp", "/images/tiptone/002.webp", "/images/tipto
 TipTone is a stepping stone side walk that follows a single tune as you walk along the TipTone Path.
 
 Users are welcome to walk the walk and follow the beaten path while enjoying a familiar musical masterpiece or be bold and improvise with the given notes a new individual path and musical creation.
+
+TipTone was commissioned by Sounds In The Old City Festival, Jerusalem 2017.

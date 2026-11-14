@@ -20,3 +20,5 @@ The introduction of the digital sphere has expanded the borders of our identity 
 Each time one member of the audience will be able to stand in front of his own mirroring mini mob and start to explore his active dynamic facades. Each DoppelGänger manifest a different behavioural pattern and represent personality variations on kinetic behaviour, so while interacting with the group the user would be able to explore the identities, abilities and limits of each one as an individual and the group as a whole.
 
 This elaborate identity fest creates a feedback loop in which the human and robots, physical and virtual and preconditioned and spontaneous play together in chaotic harmony.
+
+DoppelGänger was commissioned by the [Science Gallery, Dublin](https://dublin.sciencegallery.com/) 2017.

@@ -11,7 +11,7 @@ year: "2013"
 thumb: "/images/brainmatters-2/thumb.webp"
 header: "/images/brainmatters-2/header.webp"
 videos: ["AgLS1_H5eH4", "rHikNKA-Gro", "qBnX-iUD2Nk", "1GaU2A3-PXQ", "Oh-zcNFcB3M", "dZI4kvwpef8"]
-gallery: ["/images/brainmatters-2/001.webp", "/images/brainmatters-2/002.webp"]
+gallery: ["/images/brainmatters-2/001.webp", "/images/brainmatters-2/002.webp", "/images/brainmatters-2/forreal-01.webp"]
 ---
 BrainMatters is a creative platform for interactive projects that make use of Brain Computer Interface (BCI). BrainMatters was first launched during [BrainTech conference 2013](http://conference.israelbrain.org/).
 
@@ -52,3 +52,7 @@ Creating a musical soundtrack based on mind waves transmitted from an EEG headse
 **Neurotic Draw-Bot – Miriam Kreisler/ Tom Mayblum/ Tom Sofer**
 
 Drawing robot which interprets a portrait according to the EEG readings of the user – If the user is suffering (or enjoying) a state of reduced attention, it will be depicted graphically within the portrait.
+
+**Real Life EEG: Towards Emotional City Mapping – Boris Oicherman/ Vienne Chan/ Zachi Dinar**
+
+An artist working in public space always relies on one’s own intuition and knowledge of the area. But what if an artist would have a methodology and the technology to learn how the streets feel like to their regular users – the city inhabitants? The development of low-cost portable EEG devices can possibly provide the basis of such technology, as they allow reading the EEG data in a non-intrusive way, outside of the laboratory, as people wearing them while commute in the city. This project is an initial step in exploring this possibility. We measured the EEG signals of four people, as they move along the route from the hipster Rothshild street area, through the parking lot, a busy junction, a street full of brothels, to the Neve Sheanan street occupied mostly by African immigrants. We hope to be able to continue this research on a larger scale in the future.

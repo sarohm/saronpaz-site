@@ -10,7 +10,7 @@ client: "Google Israel, Fresh Paint Art Fair, Google Zeitgeist London, Google NY
 year: "2013"
 thumb: "/images/causeandeffect/thumb.webp"
 header: "/images/causeandeffect/header.webp"
-videos: ["2wqqlfAAxho", "vimeo:263737737", "6on0lNud36E", "7xW72XDePOI", "RpQ9nuL8Qgo", "vimeo:297584947", "vimeo:297584885", "vimeo:297584846", "vimeo:297584809"]
+videos: ["2wqqlfAAxho", "vimeo:263737737", "6on0lNud36E", "7xW72XDePOI", "RpQ9nuL8Qgo", "vimeo:297584947", "vimeo:297584885", "vimeo:297584846", "vimeo:297584809", "playlist:PL91_eb5Pjfq7b4pjPIc2E__ZCx9LNq8Sh"]
 gallery: ["/images/causeandeffect/001.webp"]
 ---
 ***Cause&Effect*** is our way of honoring the amazing legacy of [Rube Goldberg](https://en.wikipedia.org/wiki/Rube_Goldberg)
@@ -18,6 +18,8 @@ gallery: ["/images/causeandeffect/001.webp"]
 ***Rube Goldberg*** machines encompass all we love and believe in what we do. The heart and soul of such machines is pure experience and joy and absolutely none practicality what so ever. So sometimes we just do them for fun, sometimes we use them in workshops and every now and then we get to make special Rube Goldberg delight. Here are a few worth mentioning.
 
 ***BallsAway*** is a physi digi marble Rube Goldberg Machine. After playing around with Rube Goldberg Machines for many years we were lucky to realize our dream of building a proper marble run type one with all the bling that goes with it.
+
+Commissioned for Microsoft Blue Hat conference.
 
 ***PlayBall*** is a front for a school that decided to make Play its specialty. So in the spirit of play we created a mechanical apparatus that combines the inspiration in how simple it is to understand a mechanical contraption and how complex it is to make one actually work.
 
@@ -28,3 +30,5 @@ gallery: ["/images/causeandeffect/001.webp"]
 We plan to create a wonka kind of experience in which any one that passes through could drop a coin and start a magical chain reaction that would set the whole building facade in motion and would illustrate the most crazy and charming production process of one small piece of chocolate which would eventually pop out on the other back end side of the installation.
 
 We are also planing a trans continental Rube Goldberg machine really soon so stay tuned…
+
+Here are some more Rube Goldberg machines, some made by us, some made in workshops and some we just like to watch…

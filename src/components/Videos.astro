@@ -1,18 +1,24 @@
 ---
-// Light YouTube/Vimeo embeds: only a thumbnail loads until the visitor clicks play.
+// Light video embeds: only a thumbnail loads until the visitor clicks play.
+// Entries: a YouTube id, "vimeo:<id>", "playlist:<YouTube playlist id>", or "file:/videos/<name>.mp4" (a file in public/).
+import { u } from '../lib/url';
 interface Props { videos: string[]; title: string }
 const { videos, title } = Astro.props;
-const items = videos.map((v) =>
-  v.startsWith('vimeo:')
-    ? { kind: 'vimeo', id: v.slice(6), thumb: '', embed: `https://player.vimeo.com/video/${v.slice(6)}?autoplay=1` }
-    : { kind: 'youtube', id: v, thumb: `https://i.ytimg.com/vi/${v}/hqdefault.jpg`, embed: `https://www.youtube-nocookie.com/embed/${v}?autoplay=1&rel=0` },
-);
+const items = videos.map((v) => {
+  if (v.startsWith('vimeo:')) return { kind: 'vimeo', thumb: '', embed: `https://player.vimeo.com/video/${v.slice(6)}?autoplay=1`, label: '' };
+  if (v.startsWith('playlist:')) return { kind: 'playlist', thumb: '', embed: `https://www.youtube-nocookie.com/embed/videoseries?list=${v.slice(9)}&autoplay=1`, label: 'Playlist' };
+  if (v.startsWith('file:')) return { kind: 'file', thumb: '', embed: u(v.slice(5)), label: '' };
+  return { kind: 'youtube', thumb: `https://i.ytimg.com/vi/${v}/hqdefault.jpg`, embed: `https://www.youtube-nocookie.com/embed/${v}?autoplay=1&rel=0`, label: '' };
+});
 ---
 {items.length > 0 && (
   <div class="videos" data-count={Math.min(items.length, 3)}>
-    {items.map((v, i) => (
-      <button class="video" data-embed={v.embed} aria-label={`Play video ${i + 1}: ${title}`}>
+    {items.map((v, i) => v.kind === 'file' ? (
+      <video class="video" src={v.embed} controls preload="metadata" playsinline aria-label={`Video ${i + 1}: ${title}`}></video>
+    ) : (
+      <button class="video" data-embed={v.embed} aria-label={`Play ${v.label ? 'playlist' : 'video'} ${i + 1}: ${title}`}>
         {v.thumb && <img src={v.thumb} alt="" loading="lazy" decoding="async" />}
+        {v.label && <span class="vlabel eyebrow">{v.label}</span>}
         <span class="play" aria-hidden="true"></span>
       </button>
     ))}
@@ -20,7 +26,7 @@ const items = videos.map((v) =>
 )}
 
 <script>
-  document.querySelectorAll<HTMLButtonElement>('.video').forEach((b) => {
+  document.querySelectorAll<HTMLButtonElement>('button.video').forEach((b) => {
     b.addEventListener('click', () => {
       const f = document.createElement('iframe');
       f.src = b.dataset.embed!;
@@ -39,6 +45,8 @@ const items = videos.map((v) =>
   :global(.video) { position: relative; aspect-ratio: 16 / 9; width: 100%; border: 0; padding: 0; background: #000; cursor: pointer; overflow: hidden; display: block; }
   .video img { width: 100%; height: 100%; object-fit: cover; opacity: .9; transition: opacity .2s; }
   .video:hover img { opacity: 1; }
+  .vlabel { position: absolute; left: 16px; top: 14px; color: #fff; opacity: .8; }
+  video.video { cursor: auto; object-fit: contain; }
   .play { position: absolute; inset: 0; margin: auto; width: 64px; height: 44px; background: rgba(20, 22, 24, .85); border-radius: 10px; }
   .play::after { content: ''; position: absolute; left: 26px; top: 13px; border-left: 16px solid #fff; border-top: 9px solid transparent; border-bottom: 9px solid transparent; }
   .video:hover .play { background: #e00; }

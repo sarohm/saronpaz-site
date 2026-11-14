@@ -18,3 +18,5 @@ SolidSilhouette is an art installation inviting the audience to take part in a c
 After they are rewarded with their own cut out Silhouette they are invited to add it to the growing sculpture made of a growing number of Silhouettes.
 
 Later we were commissioned by the Strauss Group to create a special SolidSilhouette valentine’s Edition.
+
+SolidSilhouette was commissioned by the MusraraMix Media Festival, Jerusalem 2013.

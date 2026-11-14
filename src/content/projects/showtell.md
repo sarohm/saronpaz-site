@@ -11,7 +11,7 @@ year: "2011"
 thumb: "/images/showtell/thumb.webp"
 header: "/images/showtell/header.webp"
 videos: ["xtUnXWGZED4", "wiPN-MiKjqE", "O4_UMQ4L44I"]
-gallery: []
+gallery: ["/images/showtell/forreal-logo.webp"]
 ---
 The idea for the Show&Tell glove was conceived as a creative solution foreseeing future wearable computers communication.
 
@@ -20,6 +20,8 @@ While most components can be minimized and become ‘user friendly’ the keyboa
 Using sign language also makes a poetic statement in utilizing a tool originally used by handicap people in order to enable the rest of us new forms of forward thinking innovative communication platforms.
 
 In 2011 we were invited by Google Israel to come up with a way to utilize the Android ADK. We decided to revive an old dream and try to create a glove that can translate sign language into text.
+
+Since it was exhibited at Google Developers Day 2012, the Show&Tell glove has been exhibited at Google Zeitgeist 2012. We were also lucky to get an item on the Israeli Channel 2 news.
 
 The Show&Tell glove has also been featured at
 

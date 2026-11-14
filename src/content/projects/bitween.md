@@ -22,3 +22,5 @@ The LightPong is activated by light and drives a ball of lights on a parabolic t
 **SonicPong** 
 
 The SonicPong still plays a game of catch but with sound. As you shout into the racket the sound travels through 30 speakers to the other player and again grows faster with time.
+
+BitWeen is permanently exhibited at the [MadaTech](http://www.madatech.org.il/en) – the Israel National Museum of Science Technology & Space.
