@@ -17,4 +17,8 @@ DotDotDot is an exploration of collective creativity. It is an interactive drawi
 
 There are a few drawing modes determined by the amount of dots taking part in the drawing.
 
+- While there is only one light dot active you can draw freely light you would with a pencil.
+- Two light dots would automatically connect to create a straight line between them.
+- Beyond two dots each dot would connect to the two other dots closest to it.
+
 A group of light dots would potentially create a collective drawing and explore the creative and playful limitations and possibilities that DotDotDot has to offer.

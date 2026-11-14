@@ -9,7 +9,7 @@ No database, no admin panel, no plugins: every page is a plain file.
 |---|---|
 | A project (text, year, client, tags, images, videos) | `src/content/projects/<name>.md` |
 | Services + MeansToNoEnd | `src/content/pages/<name>.md` |
-| Hero lines, About, "Talk to us", contact details, menu, "Just talented" | `src/data/site.json` |
+| Hero lines, About, "Talk to us", contact details, menu, Partners, Clients, Talented Friends, Just talented (name, image, website `url`) | `src/data/site.json` |
 | Images | `public/images/<project>/` |
 | Look & feel | `src/styles/global.css` and the `<style>` block in each `.astro` file |
 

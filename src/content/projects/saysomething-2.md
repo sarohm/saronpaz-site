@@ -13,7 +13,7 @@ header: "/images/saysomething-2/header.webp"
 videos: ["RfZl89_2fhw"]
 gallery: []
 ---
-SaySomething is a social game app made for Google Glass but that can also be used as an Android smartphone app.
+SaySomething is a social game app made for [Google Glass](https://www.google.com/glass/start/) but that can also be used as an Android smartphone app.
 
 In the game every user is invited to challenge his fellow player to say any word out loud. Players receive credits according to the reaction speed, ‘trickiness’ of the word, social environment as assigned by the challenge initiator. SaySomething can be used in offices, parties and many other social environments and will never fail to amuse and embarrass.
 

@@ -17,10 +17,10 @@ When we travel for a vacation or seeking new adventures in far away places, we t
 
 We hope TakeAway to hopefully be a start of a new movement for guerilla memorabilia attractions all around the world and starting with the wonderful city of Amsterdam !
 
-Almost everyone knows the joy of an elongated coin or in other words – putting a coin on the rails and waiting anxiously to see what happens (with the small fear that it might derail the train). Sadly that ancient childish craft has been commercialized by fancy boxes in tourist attractions.
+Almost everyone knows the joy of an [elongated coin](http://en.wikipedia.org/wiki/Elongated_coin) or in other words – putting a coin on the rails and waiting anxiously to see what happens (with the small fear that it might derail the train). Sadly that ancient childish craft has been commercialized by fancy boxes in tourist attractions.
 
 This is going to be a open source, DIY, reckless guerilla memorabilia you are sure to remember !
 
 Here is the Instructable i have made for this project –
 
-https://www.instructables.com/id/SiteSpecific-a-guerilla-memorabilia-Amsterdam/
+[https://www.instructables.com/id/SiteSpecific-a-guerilla-memorabilia-Amsterdam/](https://www.instructables.com/id/SiteSpecific-a-guerilla-memorabilia-Amsterdam/)

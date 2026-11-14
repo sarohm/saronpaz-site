@@ -21,4 +21,6 @@ BackOffice is a part of a joint effort to create an international community of m
 
 We hope to continue to explore new means of employee engagement and the connection between corporate, creativity, Technology and experience in other companies in the future.
 
-Special thanks to KLARNA that allowed us to come in and play. This project couldn’t have come to life without the help of Nadav Kaddar.
+Special thanks to KLARNA that allowed us to come in and play. 
+
+This project couldn’t have come to life without the help of Nadav Kaddar.

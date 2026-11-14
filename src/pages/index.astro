@@ -3,6 +3,8 @@ import { u } from '../lib/url';
 import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import ProjectGrid from '../components/ProjectGrid.astro';
+import Logos from '../components/Logos.astro';
+import People from '../components/People.astro';
 import site from '../data/site.json';
 
 const projects = (await getCollection('projects', (p) => !p.data.hidden)).sort((a, b) => a.data.order - b.data.order);
@@ -61,17 +63,10 @@ const heroB = site.hero.filter((_: string, i: number) => i % 2 === 1);
     <ProjectGrid id={sec.id} title={sec.title} items={projects.filter((p) => p.data.section === sec.id)} />
   ))}
 
-  <section class="talented">
-    <h2 class="talented-title">Just talented</h2>
-    <ul class="people" role="list">
-      {site.talented.map((t: { name: string; image: string }) => (
-        <li>
-          {t.image ? <img src={u(t.image)} alt="" loading="lazy" decoding="async" /> : <div class="ph"></div>}
-          <h3>{t.name}</h3>
-        </li>
-      ))}
-    </ul>
-  </section>
+  <Logos id="partners" title="Partners" logos={site.partners} />
+  <Logos id="clients" title="Clients" logos={site.clients} />
+  <People id="friends" title="Talented Friends" people={site.friends} />
+  <People id="talented" title="Just talented" people={site.talented} />
 </Base>
 
 <script>
@@ -116,11 +111,6 @@ const heroB = site.hero.filter((_: string, i: number) => i % 2 === 1);
   .services p { font-family: var(--serif); color: var(--muted); font-size: 17px; margin: 0; }
   .services a:hover h3 { text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1px; }
 
-  .talented { padding: 110px 0 0; }
-  .talented-title { font-family: var(--serif); font-weight: 900; font-size: 75px; text-align: center; margin: 0 0 54px; }
-  .people { list-style: none; margin: 0 auto; padding: 0 36px; max-width: 1200px; display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 44px 36px; text-align: center; }
-  .people img, .people .ph { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; background: var(--soft); }
-  .people h3 { font-family: var(--serif); font-weight: 700; font-size: 17px; margin: 14px 0 0; padding-bottom: 8px; border-bottom: 1px solid var(--line); display: inline-block; }
 
   @media (max-width: 1000px) {
     .hero { min-height: 0; }
@@ -137,7 +127,5 @@ const heroB = site.hero.filter((_: string, i: number) => i % 2 === 1);
     .about { padding: 70px 0; }
     .services { padding-top: 70px; }
     .services h3 { font-size: 24px; }
-    .talented-title { font-size: clamp(44px, 13vw, 75px); }
-    .people { padding: 0 20px; grid-template-columns: 1fr 1fr; gap: 28px 18px; }
   }
 </style>

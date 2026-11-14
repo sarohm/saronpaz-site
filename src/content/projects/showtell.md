@@ -23,16 +23,16 @@ In 2011 we were invited by Google Israel to come up with a way to utilize the An
 
 The Show&Tell glove has also been featured at
 
-Coolest-gadgest.com
+[Coolest-gadgest.com](http://www.coolest-gadgets.com/20111216/texting-glove-hearing-impaired/)
 
-Make Magazine
+[Make Magazine](http://blog.makezine.com/2012/01/12/android-sign-language-interpreting-glove/)
 
-MedGadget
+[MedGadget](http://medgadget.com/2012/01/a-sign-language-interpreter-glove-for-your-smartphone.html)
 
-Techeye.net
+[Techeye.net](http://news.techeye.net/science/developers-come-up-with-glove-to-help-the-deaf-speak)
 
-TNW Gadget
+[TNW Gadget](http://thenextweb.com/gadgets/2012/01/09/this-glove-works-with-an-android-app-to-translate-sign-language-into-text/)
 
-Ubergizmo
+[Ubergizmo](http://www.ubergizmo.com/2011/12/texting-glove)
 
-Web Urbanist
+[Web Urbanist](http://weburbanist.com/2012/03/21/right-hear-right-now-8-terrific-techy-devices-for-the-deaf/)

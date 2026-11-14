@@ -15,11 +15,13 @@ gallery: ["/images/misuse/001.webp", "/images/misuse/002.webp", "/images/misuse/
 ---
 BETWEEN TWO EVILS, I ALWAYS PICK THE ONE I NEVER TRIED BEFORE.—Mae West
 
-MisUse is a free exploration of the use of the objects that lay around us. While ignoring common manufacturer warnings and parental advisory i ventured into the guilty pleasure of MisUse. Using small add ons i tried out different ways to extract devious fun out of innocent instruments.
+MisUse is a free exploration of the use of the objects that lay around us. While ignoring common manufacturer warnings and parental advisory i ventured into the guilty pleasure of MisUse. Using small add ons i tried out different ways to 
 
-Follow the MisUse blog
+extract devious fun out of innocent instruments.
 
-Or the MisUse Facebook page
+Follow the [MisUse blog](http://sarohm-misuse.blogspot.co.il/)
+
+Or the [MisUse Facebook page](https://www.facebook.com/MisUseing/?ref=bookmarks)
 
 Or on Pinterest – https://pin.it/7mHQHxj
 

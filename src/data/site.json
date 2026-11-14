@@ -56,75 +56,93 @@
   "talented": [
     {
       "name": "Dunne & Raby",
-      "image": "/images/talented/dunne-raby.webp"
+      "image": "/images/talented/dunne-raby.webp",
+      "url": "https://dunneandraby.co.uk/"
     },
     {
       "name": "Glithero",
-      "image": "/images/talented/glithero.webp"
+      "image": "/images/talented/glithero.webp",
+      "url": "https://www.glithero.com/"
     },
     {
       "name": "Random International",
-      "image": "/images/talented/random-international.webp"
+      "image": "/images/talented/random-international.webp",
+      "url": "https://www.random-international.com/"
     },
     {
-      "name": "Roman Singer",
-      "image": "/images/talented/roman-singer.webp"
+      "name": "Roman Signer",
+      "image": "/images/talented/roman-singer.webp",
+      "url": "https://www.romansigner.ch/"
     },
     {
       "name": "Noam Toran",
-      "image": "/images/talented/noam-toran.webp"
+      "image": "/images/talented/noam-toran.webp",
+      "url": "http://www.noamtoran.com/"
     },
     {
       "name": "Nelly Ben Hayoun",
-      "image": "/images/talented/nelly-ben-hayoun.webp"
+      "image": "/images/talented/nelly-ben-hayoun.webp",
+      "url": "https://nellyben.com/"
     },
     {
       "name": "Michael Sailstorfer",
-      "image": "/images/talented/michael-sailstorfer.webp"
+      "image": "/images/talented/michael-sailstorfer.webp",
+      "url": "https://sailstorfer.com/"
     },
     {
       "name": "Maywa Denki",
-      "image": "/images/talented/maywa-denki.webp"
+      "image": "/images/talented/maywa-denki.webp",
+      "url": "https://www.maywadenki.com/"
     },
     {
       "name": "Marti Guixe",
-      "image": "/images/talented/marti-guixe.webp"
+      "image": "/images/talented/marti-guixe.webp",
+      "url": "https://www.guixe.com/"
     },
     {
       "name": "Maarten Baas",
-      "image": ""
+      "image": "/images/talented/maarten-baas.webp",
+      "url": "https://maartenbaas.com/"
     },
     {
       "name": "Graffiti Research Lab",
-      "image": "/images/talented/graffiti-research-lab.webp"
+      "image": "/images/talented/graffiti-research-lab.webp",
+      "url": "https://graffitiresearchlab.com/"
     },
     {
       "name": "Olafur Eliasson",
-      "image": "/images/talented/olafur-eliasson.webp"
+      "image": "/images/talented/olafur-eliasson.webp",
+      "url": "https://olafureliasson.net/"
     },
     {
       "name": "Domestic Data Streamers",
-      "image": "/images/talented/domestic-data-streamers.webp"
+      "image": "/images/talented/domestic-data-streamers.webp",
+      "url": "https://www.domesticstreamers.com/"
     },
     {
       "name": "Zach Gage",
-      "image": "/images/talented/zach-gage.webp"
+      "image": "/images/talented/zach-gage.webp",
+      "url": "https://stfj.net/"
     },
     {
       "name": "Tim Hunkin",
-      "image": "/images/talented/tim-hunkin.webp"
+      "image": "/images/talented/tim-hunkin.webp",
+      "url": "https://www.timhunkin.com/"
     },
     {
       "name": "Jason Eppink",
-      "image": ""
+      "image": "/images/talented/jason-eppink.webp",
+      "url": "https://jasoneppink.com/"
     },
     {
       "name": "Sophie Calle",
-      "image": "/images/talented/sophie-calle.webp"
+      "image": "/images/talented/sophie-calle.webp",
+      "url": "https://www.perrotin.com/en/artists/sophie-calle"
     },
     {
       "name": "Extrapolation Factory",
-      "image": "/images/talented/extrapolation-factory.webp"
+      "image": "/images/talented/extrapolation-factory.webp",
+      "url": "https://extrapolationfactory.com/"
     }
   ],
   "menu": [
@@ -238,5 +256,149 @@
     "Work X",
     "Risky X",
     "Touristic X"
+  ],
+  "partners": [
+    "/images/partners/01.webp",
+    "/images/partners/02.webp",
+    "/images/partners/03.webp",
+    "/images/partners/04.webp",
+    "/images/partners/05.webp",
+    "/images/partners/06.webp",
+    "/images/partners/07.webp",
+    "/images/partners/08.webp",
+    "/images/partners/09.webp",
+    "/images/partners/10.webp",
+    "/images/partners/11.webp"
+  ],
+  "clients": [
+    "/images/clients/01.webp",
+    "/images/clients/02.webp",
+    "/images/clients/03.webp",
+    "/images/clients/04.webp",
+    "/images/clients/05.webp",
+    "/images/clients/06.webp",
+    "/images/clients/07.webp",
+    "/images/clients/08.webp",
+    "/images/clients/09.webp",
+    "/images/clients/10.webp",
+    "/images/clients/11.webp",
+    "/images/clients/12.webp",
+    "/images/clients/13.webp",
+    "/images/clients/14.webp",
+    "/images/clients/15.webp",
+    "/images/clients/16.webp",
+    "/images/clients/17.webp",
+    "/images/clients/18.webp",
+    "/images/clients/19.webp",
+    "/images/clients/20.webp",
+    "/images/clients/21.webp",
+    "/images/clients/22.webp",
+    "/images/clients/23.webp",
+    "/images/clients/24.webp",
+    "/images/clients/25.webp",
+    "/images/clients/26.webp",
+    "/images/clients/27.webp",
+    "/images/clients/28.webp",
+    "/images/clients/29.webp",
+    "/images/clients/30.webp",
+    "/images/clients/31.webp",
+    "/images/clients/32.webp",
+    "/images/clients/33.webp",
+    "/images/clients/34.webp",
+    "/images/clients/35.webp",
+    "/images/clients/36.webp",
+    "/images/clients/37.webp"
+  ],
+  "friends": [
+    {
+      "name": "Zvika Markfeld",
+      "image": "/images/friends/zvika-markfeld.webp",
+      "url": ""
+    },
+    {
+      "name": "Nienke Sybrandy",
+      "image": "/images/friends/nienke-sybrandy.webp",
+      "url": ""
+    },
+    {
+      "name": "Rachel Griffin",
+      "image": "/images/friends/rachel-griffin.webp",
+      "url": ""
+    },
+    {
+      "name": "Formafantasma",
+      "image": "/images/friends/formafantasma.webp",
+      "url": ""
+    },
+    {
+      "name": "Sonja Bäumel",
+      "image": "/images/friends/sonja-ba-umel.webp",
+      "url": ""
+    },
+    {
+      "name": "Ulrike Rehm",
+      "image": "/images/friends/ulrike-rehm.webp",
+      "url": ""
+    },
+    {
+      "name": "Tal Erez",
+      "image": "/images/friends/tal-erez.webp",
+      "url": ""
+    },
+    {
+      "name": "Pinar&Viola",
+      "image": "",
+      "url": ""
+    },
+    {
+      "name": "Ira Eduardovna",
+      "image": "/images/friends/ira-eduardovna.webp",
+      "url": ""
+    },
+    {
+      "name": "Yonatan H. Mishal",
+      "image": "/images/friends/yonatan-h-mishal.webp",
+      "url": ""
+    },
+    {
+      "name": "Heela Harel",
+      "image": "/images/friends/heela-harel.webp",
+      "url": ""
+    },
+    {
+      "name": "Jennifer de Jonge",
+      "image": "/images/friends/jennifer-de-jonge.webp",
+      "url": ""
+    },
+    {
+      "name": "Andrea Bandoni",
+      "image": "/images/friends/andrea-bandoni.webp",
+      "url": ""
+    },
+    {
+      "name": "mischertraxler",
+      "image": "/images/friends/mischertraxler.webp",
+      "url": ""
+    },
+    {
+      "name": "Inbal Hoffman",
+      "image": "/images/friends/inbal-hoffman.webp",
+      "url": ""
+    },
+    {
+      "name": "Omer & Tal Golan",
+      "image": "/images/friends/omer-tal-golan.webp",
+      "url": ""
+    },
+    {
+      "name": "Anneke Jakobs",
+      "image": "/images/friends/anneke-jakobs.webp",
+      "url": ""
+    },
+    {
+      "name": "Ayala Moses",
+      "image": "/images/friends/ayala-moses.webp",
+      "url": ""
+    }
   ]
 }

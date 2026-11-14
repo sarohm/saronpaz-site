@@ -1,0 +1,26 @@
+---
+// A titled wall of logos (Partners, Clients).
+import { u } from '../lib/url';
+interface Props { title: string; logos: string[]; id?: string }
+const { title, logos, id } = Astro.props;
+---
+<section class="logos-section" id={id}>
+  <h2 class="title">{title}</h2>
+  <ul class="logos" role="list">
+    {logos.map((src) => <li><img src={u(src)} alt="" loading="lazy" decoding="async" /></li>)}
+  </ul>
+</section>
+
+<style>
+  .logos-section { padding: 110px 0 0; }
+  .title { font-family: var(--serif); font-weight: 900; font-size: 75px; text-align: center; margin: 0 0 54px; }
+  .logos { list-style: none; margin: 0 auto; padding: 0 36px; max-width: 1200px; display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 36px; align-items: center; }
+  .logos li { display: grid; place-items: center; aspect-ratio: 3 / 2; }
+  .logos img { max-width: 100%; max-height: 100%; object-fit: contain; filter: grayscale(1); opacity: .75; transition: filter .25s, opacity .25s; }
+  .logos li:hover img { filter: none; opacity: 1; }
+  @media (max-width: 700px) {
+    .logos-section { padding-top: 70px; }
+    .title { font-size: clamp(44px, 13vw, 75px); }
+    .logos { padding: 0 20px; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  }
+</style>

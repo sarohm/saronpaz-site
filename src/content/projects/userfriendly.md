@@ -13,4 +13,6 @@ header: "/images/userfriendly/header.webp"
 videos: ["vimeo:32672713"]
 gallery: ["/images/userfriendly/001.webp"]
 ---
-A FALLDING CHAIR A chair that ‘demands your attention’ and getting to know it better before you can comfortably sit on it.
+A FALLDING CHAIR 
+
+A chair that ‘demands your attention’ and getting to know it better before you can comfortably sit on it.

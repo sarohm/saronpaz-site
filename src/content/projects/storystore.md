@@ -17,17 +17,19 @@ The Story Store explores the relationship between designer, product and consumer
 
 selected designers create objects to fit in a box. The objects are then concealed within numbered boxes, the only means of communication between product and consumer being a short story written by the designer. The consumer can choose a story from the catalogue and buying into more than just an object…
 
-StoryStore – Seks is meer edition
+**StoryStore – Seks is meer edition**
 
 Sex is all about interaction, the art of giving and receiving, a delicate tension between the unseen and the exposed.
 
-Join our provocative role play, which invites you to creatively connect some sexy stories from your own intimate biography or your vivid, fantastic imagination, with an object you may have brought with you or one you can make in our backstage workshop.
+Join our provocative role play, which invites you to creatively connect some sexy 
+
+stories from your own intimate biography or your vivid, fantastic imagination, with an object you may have brought with you or one you can make in our backstage workshop.
 
 The object will be concealed in a box by our office manager while the story will be on display for other visitors to choose and acquire.
 
 As the saying goes, ‘you get what you give’: for each generous donation of a story/object you get the privilege of choosing another’s story which you like and also the bonus mystery box that comes with it.
 
-StoryStore – Giveaway edition
+**StoryStore – Giveaway edition**
 
 The Third edition of the StoryStore was all about exchanging objects and stories. Participant are invited to share their stories and objects (either their own objects or one they create in the StoryStore workshop.
 

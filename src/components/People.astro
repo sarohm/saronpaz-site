@@ -1,0 +1,40 @@
+---
+// A titled grid of people (Talented Friends, Just talented). Entries with a url open the person's site in a new tab.
+import { u } from '../lib/url';
+interface Person { name: string; image: string; url?: string }
+interface Props { title: string; people: Person[]; id?: string }
+const { title, people, id } = Astro.props;
+---
+<section class="people-section" id={id}>
+  <h2 class="title">{title}</h2>
+  <ul class="people" role="list">
+    {people.map((p) => {
+      const inner = (
+        <>
+          {p.image ? <img src={u(p.image)} alt="" loading="lazy" decoding="async" /> : <div class="ph" aria-hidden="true"></div>}
+          <h3>{p.name}</h3>
+        </>
+      );
+      return (
+        <li>
+          {p.url ? <a href={p.url} target="_blank" rel="noopener">{inner}</a> : <div>{inner}</div>}
+        </li>
+      );
+    })}
+  </ul>
+</section>
+
+<style>
+  .people-section { padding: 110px 0 0; }
+  .title { font-family: var(--serif); font-weight: 900; font-size: 75px; text-align: center; margin: 0 0 54px; }
+  .people { list-style: none; margin: 0 auto; padding: 0 36px; max-width: 1200px; display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 44px 36px; text-align: center; }
+  .people img, .people .ph { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; background: var(--soft); transition: opacity .2s; }
+  .people h3 { font-family: var(--serif); font-weight: 700; font-size: 17px; margin: 14px 0 0; padding-bottom: 8px; border-bottom: 1px solid var(--line); display: inline-block; }
+  .people a:hover img { opacity: .8; }
+  .people a:hover h3 { border-bottom-color: var(--ink); }
+  @media (max-width: 700px) {
+    .people-section { padding-top: 70px; }
+    .title { font-size: clamp(44px, 13vw, 75px); }
+    .people { padding: 0 20px; grid-template-columns: 1fr 1fr; gap: 28px 18px; }
+  }
+</style>

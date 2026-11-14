@@ -13,7 +13,7 @@ header: "/images/musraramix/header.webp"
 videos: ["nA0M3u03IeI", "kMtqgVvTJCk", "1277gyFwNxY", "WKQTCDJVyWU"]
 gallery: ["/images/musraramix/001.webp", "/images/musraramix/002.webp", "/images/musraramix/003.webp", "/images/musraramix/004.webp", "/images/musraramix/005.webp", "/images/musraramix/006.webp", "/images/musraramix/007.webp", "/images/musraramix/008.webp", "/images/musraramix/009.webp", "/images/musraramix/010.webp", "/images/musraramix/011.webp", "/images/musraramix/012.webp", "/images/musraramix/013.webp", "/images/musraramix/014.webp"]
 ---
-The MusraraMix Festival is an international multidisciplinary event that takes place in the borderline neighborhood of Musrara and initiated and produced by the Naggar Multidisciplinary School of Art and Society, Musrara.
+The MusraraMix Festival is an international multidisciplinary event that takes place in the borderline neighborhood of Musrara and initiated and produced by [the Naggar Multidisciplinary School of Art and Society, Musrara](http://www.musrara.co.il).
 
 The festival is a hub of artistic and social happenings, embodying the political and cultural essence of Jerusalem and Israel. Every year the festival is based around one theme. We believe in the significant role the creative process has, when it turns our gaze onto society and the identities that structure it. We believe in the power the festival has, as part of the educational process of the students.
 
@@ -21,10 +21,10 @@ The Naggar Multidisciplinary School of Art and Society, Musrara., invites the pu
 
 I was fortunate to curate
 
-Musrara Mix #12
+[Musrara Mix #12](http://musraramixfest.org.il/musraramix12/)
 
-Musrara Mix #13
+[Musrara Mix #13](http://musraramixfest.org.il/musraramix13/)
 
-Musrara Mix #14
+[Musrara Mix #14](http://musraramixfest.org.il/musraramix14/)
 
-And the WonderPark in Musrara Mix #17
+And the WonderPark in [Musrara Mix #17](http://musraramixfest.org.il/index.php?lang=en)

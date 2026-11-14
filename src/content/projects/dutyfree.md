@@ -13,9 +13,9 @@ header: "/images/dutyfree/header.webp"
 videos: ["vimeo:34296273", "vimeo:34291475", "vimeo:32683119"]
 gallery: []
 ---
-To know how to free oneself is nothing; the arduous thing is to know what to do with one’s freedom’ Andre Gide
+**To know how to free oneself is nothing; the arduous thing is to know what to do with one’s freedom’** Andre Gide
 
-Duty/Free is a peek into the dynamic, authentic and autonomic creative process of the Sandberg Institute Applied Arts department students. Where different backgrounds, disciplines, points of view and experiences meet. It is a union of microcosms, a celebration of free thinking and making. Participants showcase their unique kind of freedom in their own specially designed space and visitors are invited to tour through, find their way and discover new wonders.
+Duty/Free is a peek into the dynamic, authentic and autonomic creative process of the [Sandberg Institute](http://sandberg.nl/) Applied Arts department students. Where different backgrounds, disciplines, points of view and experiences meet. It is a union of microcosms, a celebration of free thinking and making. Participants showcase their unique kind of freedom in their own specially designed space and visitors are invited to tour through, find their way and discover new wonders.
 
 Duty/Free is also a tribute to the leaving head of the department Andre Klein. Under his wings some lucky students (including myself) could clear their own path, feel free and secure to speak and make their own mind and get the chance to boldly go where they have never been before.
 

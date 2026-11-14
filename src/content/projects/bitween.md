@@ -13,8 +13,12 @@ header: "/images/bitween/header.webp"
 videos: ["aNwPdb7d0TA", "wedSnCyItuA", "-afUnE9xX7k", "vrgc51qw6-k", "wei84eNnUeU", "7jiuIHM7EYU"]
 gallery: []
 ---
-BitWeen is a series of interactive game installation inspired by the classic pong game. In our different versions we take a more experience based approach.
+BitWeen is a series of interactive game installation inspired by the classic [pong](https://en.wikipedia.org/wiki/Pong) game. In our different versions we take a more experience based approach.
 
-LightPong The LightPong is activated by light and drives a ball of lights on a parabolic trajectory. As you go on the speed of the ball increases.
+**LightPong** 
 
-SonicPong The SonicPong still plays a game of catch but with sound. As you shout into the racket the sound travels through 30 speakers to the other player and again grows faster with time.
+The LightPong is activated by light and drives a ball of lights on a parabolic trajectory. As you go on the speed of the ball increases.
+
+**SonicPong** 
+
+The SonicPong still plays a game of catch but with sound. As you shout into the racket the sound travels through 30 speakers to the other player and again grows faster with time.

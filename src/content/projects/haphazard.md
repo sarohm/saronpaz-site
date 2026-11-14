@@ -13,6 +13,14 @@ header: "/images/haphazard/header.webp"
 videos: ["CPF9YQ0JA7A", "jOU5YLwIpHs"]
 gallery: ["/images/haphazard/001.webp", "/images/haphazard/002.webp", "/images/haphazard/003.webp"]
 ---
-It started with the thought of how to create a simple unpredictable electronic device. Its so simple its embarrassing but once you start playing around with it, you just cant stop
+### A Playful Random Light System
 
-Here is the Instructable : https://www.instructables.com/id/Haphazard-a-playful-random-light-system/
+It started with the thought of how to create a simple unpredictable electronic device. 
+
+Its so simple its embarrassing 
+
+but 
+
+once you start playing around with it, you just cant stop
+
+Here is the Instructable : [https://www.instructables.com/id/Haphazard-a-playful-random-light-system/](https://www.instructables.com/id/Haphazard-a-playful-random-light-system/)

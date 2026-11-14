@@ -15,9 +15,9 @@ gallery: ["/images/guerillagreen/001.webp", "/images/guerillagreen/002.webp", "/
 ---
 The GuerillaGreen Initiative is an open to join forces with nature in it’s subtle fight against enforced ‘world order’ in the urban surroundings. GuerillaGreen is a way to loose control, go wild, create diversity, color and break through.
 
-during the opening of the TOLHUISTUIN in Amsterdam, seed balls (a self contained cluster of soil and different seeds) were spread by the public in a chaotic, fun manner using a catapult, a spinning ‘pinata’ & a water rocket.
+during the opening of the [TOLHUISTUIN](http://tolhuistuin.nl/) in Amsterdam, [seed balls](https://permaculturenews.org/2014/06/18/making-seedballs-ancient-method-till-agriculture/) (a self contained cluster of soil and different seeds) were spread by the public in a chaotic, fun manner using a catapult, a spinning ‘pinata’ & a water rocket.
 
-A COLLABORATION WITH JOSE SUBERO.
+**A COLLABORATION WITH JOSE SUBERO.**
 
 In Zaandam We followed the journey of pit, the sunflower seed. Together with kids of all ages we followed pit’s dreams, dilemmas and wonderful adventures. The story of pit invites us to take an active part in helping pit along his way.
 
@@ -25,4 +25,4 @@ Through story, fantasy and active participation we tried to incorporate our ‘o
 
 After a hard day’s work and bonding with pit’s life, hardship and his massage it was time to finally Let go (which proved to be also the most challenging stage for children of all ages)
 
-A COLLABORATION WITH JOSE SUBERO, ILLUSTRATED BY KELLY DE MEYER
+**A COLLABORATION WITH JOSE SUBERO, ILLUSTRATED BY KELLY DE MEYER**
