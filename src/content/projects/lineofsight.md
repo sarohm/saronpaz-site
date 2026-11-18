@@ -9,7 +9,7 @@ tags: ["Public X", "Tech X", "Space X"]
 client: ""
 year: ""
 thumb: "/images/lineofsight/thumb.webp"
-header: ""
+header: "/images/lineofsight/header.webp"
 videos: ["lH56YmWOz-o"]
 gallery: []
 ---

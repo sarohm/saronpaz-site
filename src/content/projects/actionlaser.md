@@ -9,7 +9,8 @@ tags: ["Play X", "Tech X", "Creative X"]
 client: "Jerusalem Science Museum makers fair"
 year: "2013"
 thumb: "/images/actionlaser/thumb.webp"
-header: ""
+header: "/images/actionlaser/header.webp"
+headerPosition: "center 15%"
 videos: ["QBARj91xB0M", "z2yj2zJDimY"]
 gallery: ["/images/actionlaser/001.webp"]
 ---

@@ -30,7 +30,7 @@ const details = [
 const firstPara = (project.body ?? '').split('\n\n').find((x) => x.length > 60) ?? '';
 ---
 <Base title={d.title} description={firstPara.slice(0, 160)} image={d.header || d.thumb}>
-  {d.header && <div class="banner" style={`background-image:url('${u(d.header)}')`} role="img" aria-label=""></div>}
+  {d.header && <div class="banner" style={`background-image:url('${u(d.header)}');background-position:${d.headerPosition}`} role="img" aria-label=""></div>}
 
   <article class="wrap project">
     <div class="text">

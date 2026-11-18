@@ -10,6 +10,7 @@ client: "Tel Aviv Museum of Art"
 year: "2026"
 thumb: "/images/artists-of-the-world-unite/thumb.webp"
 header: "/images/artists-of-the-world-unite/header.webp"
+headerPosition: "center 15%"
 videos: ["file:/videos/artists-of-the-world-unite.mp4"]
 gallery: ["/images/artists-of-the-world-unite/001.webp", "/images/artists-of-the-world-unite/002.webp", "/images/artists-of-the-world-unite/003.webp", "/images/artists-of-the-world-unite/004.webp", "/images/artists-of-the-world-unite/005.webp", "/images/artists-of-the-world-unite/006.webp", "/images/artists-of-the-world-unite/007.webp"]
 ---

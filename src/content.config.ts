@@ -16,6 +16,7 @@ const projects = defineCollection({
     year: z.string().default(''),
     thumb: z.string().default(''),
     header: z.string().default(''),
+    headerPosition: z.string().default('center'), // which part of the banner image to show, e.g. 'center 20%'
     videos: z.array(z.string()).default([]),
     gallery: z.array(z.string()).default([]),
     hidden: z.boolean().default(false),

@@ -27,6 +27,7 @@ client: "Science Gallery Dublin"
 year: "2017"
 thumb: "/images/doppelganger/thumb.webp"
 header: "/images/doppelganger/header.webp"
+headerPosition: "center 20%"   # optional: which part of the banner image shows
 videos: ["gI6PaABY3XQ"]        # YouTube ids (or "vimeo:123456")
 gallery: ["/images/doppelganger/001.webp"]
 hidden: false                  # true = keep the page but hide it from the homepage

@@ -10,6 +10,7 @@ client: ""
 year: "2015"
 thumb: "/images/pacmanman/thumb.webp"
 header: "/images/pacmanman/header.webp"
+headerPosition: "center 30%"
 videos: ["mcuSmjXJY2k", "j_BgUoO_d_c", "65ZguInKsls", "EsKmwE4498s", "ts5i1hsiFsQ"]
 gallery: []
 ---

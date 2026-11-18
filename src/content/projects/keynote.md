@@ -9,7 +9,8 @@ tags: ["Work X", "Social X", "Tech X"]
 client: ""
 year: "2021"
 thumb: "/images/keynote/thumb.webp"
-header: ""
+header: "/images/keynote/header.webp"
+headerPosition: "center 80%"
 videos: ["file:/videos/keynote.mp4"]
 gallery: ["/images/keynote/001.webp"]
 ---

@@ -9,7 +9,7 @@ tags: ["Learning X", "Creative X", "Tech X"]
 client: "Free Time Academy"
 year: "2015"
 thumb: "/images/makeree/thumb.webp"
-header: ""
+header: "/images/makeree/header.webp"
 videos: []
 gallery: ["/images/makeree/001.webp", "/images/makeree/002.webp", "/images/makeree/003.webp", "/images/makeree/004.webp"]
 ---
