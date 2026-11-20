@@ -98,9 +98,9 @@ const heroB = site.hero.filter((_: string, i: number) => i % 2 === 1);
   const floaters = [...document.querySelectorAll<HTMLElement>('.floater')];
   // x, y: where each title starts, as fractions of the hero row (images + name). Titles fade out in this order.
   const spots = [
-    { x: 0.03, y: 0.08 }, { x: 0.80, y: 0.50 }, { x: 0.33, y: 0.22 },
-    { x: 0.86, y: 0.67 }, { x: 0.10, y: 0.55 }, { x: 0.40, y: 0.62 },
-    { x: 0.84, y: 0.86 }, { x: 0.20, y: 0.90 }, { x: 0.40, y: 0.98 },
+    { x: 0.03, y: 0.08 }, { x: 0.80, y: 0.47 }, { x: 0.30, y: 0.20 },
+    { x: 0.87, y: 0.675 }, { x: 0.12, y: 0.48 }, { x: 0.42, y: 0.58 },
+    { x: 0.81, y: 0.88 }, { x: 0.03, y: 0.82 }, { x: 0.38, y: 0.98 },
   ];
   const projects = document.querySelector<HTMLElement>('[data-grid]');
   let end = 1;
@@ -109,7 +109,7 @@ const heroB = site.hero.filter((_: string, i: number) => i % 2 === 1);
     const pad = parseFloat(getComputedStyle(hero).paddingLeft);
     const top = r.top + scrollY + parseFloat(getComputedStyle(hero).paddingTop);
     const box = { left: r.left + pad, width: r.width - 2 * pad, top, height: r.bottom + scrollY - top };
-    const fs = Math.max(16, parseFloat(getComputedStyle(title).fontSize) * 0.17);
+    const fs = Math.max(16, parseFloat(getComputedStyle(title).fontSize) * 0.16);
     floaters.forEach((f, i) => {
       const s = spots[i % spots.length];
       f.style.setProperty('--fs', fs + 'px');
