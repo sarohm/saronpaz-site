@@ -60,12 +60,24 @@ const menu = site.menu.map((g: any) => ({
   burger.addEventListener('click', () => open(true));
   menu.querySelector('.close')!.addEventListener('click', () => open(false));
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') open(false); });
+  const header = document.querySelector<HTMLElement>('.site-header')!;
+  const onScroll = () => header.classList.toggle('floating', scrollY > 40);
+  onScroll();
+  addEventListener('scroll', onScroll, { passive: true });
 </script>
 
 <style>
-  .site-header { display: flex; justify-content: space-between; align-items: center; padding: 18px 36px; }
-  .logo img { width: 96px; height: 96px; object-fit: contain; }
-  .burger { background: none; border: 0; cursor: pointer; padding: 10px; display: grid; gap: 4px; }
+  /* The header floats over the page while scrolling; only the logo and the menu button catch clicks. */
+  .site-header { position: sticky; top: 0; z-index: 30; display: flex; justify-content: space-between; align-items: center; padding: 14px 36px; pointer-events: none; }
+  .site-header > * { pointer-events: auto; }
+  .logo { display: block; border-radius: 50%; transition: background .3s, box-shadow .3s, transform .3s; }
+  .logo img { width: 128px; height: 128px; object-fit: contain; transition: width .3s, height .3s; }
+  .burger { background: none; border: 0; cursor: pointer; padding: 12px; display: grid; gap: 4px; border-radius: 2px; transition: background .3s, box-shadow .3s; }
+  /* Once the page has scrolled, the logo and menu button sit on small white backings so they stay readable over images. */
+  .site-header.floating .logo { background: rgba(255,255,255,.92); box-shadow: 0 4px 18px rgba(0,0,0,.08); }
+  .site-header.floating .logo img { width: 96px; height: 96px; }
+  .site-header.floating .burger { background: rgba(255,255,255,.92); box-shadow: 0 4px 18px rgba(0,0,0,.08); }
+  .site-header.floating .logo:hover { transform: rotate(-8deg) scale(1.05); }
   .burger span { display: block; width: 20px; height: 2px; background: var(--ink); }
   .menu { position: fixed; inset: 0 0 0 auto; width: min(360px, 100%); background: var(--dark); color: #fff; z-index: 50; overflow-y: auto; padding: 72px 40px 36px; box-shadow: -10px 0 40px rgba(0,0,0,.25); }
   .menu[hidden] { display: none; }
@@ -79,5 +91,6 @@ const menu = site.menu.map((g: any) => ({
   details li a { font-family: var(--serif); font-size: 17px; display: block; padding: 3px 0; opacity: .75; }
   details li a:hover, .group-title:hover { opacity: 1; color: #fff; }
   .credit { margin-top: 36px; font-size: 12px; opacity: .5; }
-  @media (max-width: 700px) { .site-header { padding: 14px 20px; } .logo img { width: 72px; height: 72px; } }
+  @media (max-width: 700px) { .site-header { padding: 10px 16px; } .logo img { width: 92px; height: 92px; } .site-header.floating .logo img { width: 68px; height: 68px; } }
+  @media (prefers-reduced-motion: reduce) { .logo, .logo img, .burger { transition: none; } }
 </style>
