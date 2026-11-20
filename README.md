@@ -43,8 +43,14 @@ npm run dev      # preview at http://localhost:4321
 npm run build    # final site in dist/
 ```
 
-## Not done yet
+## Hosting
 
-- Hosting / pointing the saronpaz.com domain at the new site.
+- Live at https://saronpaz.com on GitHub Pages (repo sarohm/saronpaz-site). Every push to main deploys.
+- Domain registered at box.il; DNS managed in box.il's DNS zone editor (4 A records to GitHub Pages + CNAME www → sarohm.github.io).
+- Repo variable SITE_BASE is "/".
+
+## Notes
+
+
 - The old WordPress was compromised (~300 spam posts, outdated Slider Revolution plugin). None of that was copied.
 - Contact is a mailto button (no form backend).
