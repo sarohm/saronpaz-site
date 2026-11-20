@@ -85,15 +85,16 @@ const heroB = site.hero.filter((_: string, i: number) => i % 2 === 1);
 </script>
 
 <style>
-  .hero { position: relative; min-height: 640px; padding-top: 30px; }
-  .frames { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; width: 66%; }
+  /* Images on the left, title in the free column on the right, bottom-aligned with the images. */
+  .hero { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 44px; align-items: end; padding-top: 30px; }
+  .frames { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; }
   .frame { position: relative; aspect-ratio: 1; overflow: hidden; background: var(--soft); }
   .frame img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1.4s ease; }
   .frame img.on { opacity: 1; }
-  .hero-title { position: absolute; right: 36px; top: 300px; margin: 0; text-align: left; font-family: var(--serif); font-weight: 900; line-height: .98; letter-spacing: -.02em; }
-  .hero-title span { display: block; font-size: 72px; }
-  .hero-title .name { font-size: 101px; }
-  .hero-title span:nth-child(2) { font-size: 54px; }
+  .hero-title { margin: 0; text-align: left; font-family: var(--serif); font-weight: 900; line-height: .98; letter-spacing: -.02em; }
+  .hero-title span { display: block; font-size: clamp(30px, 3.9vw, 64px); }
+  .hero-title .name { font-size: clamp(42px, 5.5vw, 90px); }
+  .hero-title span:nth-child(2) { font-size: clamp(23px, 2.95vw, 48px); }
 
   .about { background: var(--soft); padding: 110px 0 100px; text-align: center; }
   .about-title { font-family: var(--sans); font-weight: 600; letter-spacing: .2em; text-transform: uppercase; font-size: 29px; margin: 0 0 22px; }
@@ -113,9 +114,7 @@ const heroB = site.hero.filter((_: string, i: number) => i % 2 === 1);
 
 
   @media (max-width: 1000px) {
-    .hero { min-height: 0; }
-    .frames { width: 100%; }
-    .hero-title { position: static; margin-top: 40px; }
+    .hero { grid-template-columns: 1fr; gap: 40px; }
     .hero-title span { font-size: clamp(34px, 9vw, 72px); }
     .hero-title .name { font-size: clamp(48px, 13vw, 101px); }
     .hero-title span:nth-child(2) { font-size: clamp(28px, 7.4vw, 54px); }
