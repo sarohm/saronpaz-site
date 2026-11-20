@@ -71,10 +71,10 @@ const menu = site.menu.map((g: any) => ({
   .site-header { position: sticky; top: 0; z-index: 30; display: flex; justify-content: space-between; align-items: center; padding: 14px 36px; pointer-events: none; }
   .site-header > * { pointer-events: auto; }
   .logo { display: block; transition: transform .3s; }
-  .logo img { width: 128px; height: 128px; object-fit: contain; transition: width .3s, height .3s; }
+  .logo img { width: 160px; height: 160px; object-fit: contain; transition: width .3s, height .3s; }
   .burger { background: none; border: 0; cursor: pointer; padding: 12px; display: grid; gap: 4px; border-radius: 2px; transition: background .3s, box-shadow .3s; }
   /* Once the page has scrolled, the logo shrinks a little and the menu button sits on a small white backing. */
-  .site-header.floating .logo img { width: 96px; height: 96px; }
+  .site-header.floating .logo img { width: 124px; height: 124px; }
   .site-header.floating .burger { background: rgba(255,255,255,.92); box-shadow: 0 4px 18px rgba(0,0,0,.08); }
   .site-header.floating .logo:hover { transform: rotate(-8deg) scale(1.05); }
   .burger span { display: block; width: 20px; height: 2px; background: var(--ink); }
@@ -90,6 +90,6 @@ const menu = site.menu.map((g: any) => ({
   details li a { font-family: var(--serif); font-size: 17px; display: block; padding: 3px 0; opacity: .75; }
   details li a:hover, .group-title:hover { opacity: 1; color: #fff; }
   .credit { margin-top: 36px; font-size: 12px; opacity: .5; }
-  @media (max-width: 700px) { .site-header { padding: 10px 16px; } .logo img { width: 92px; height: 92px; } .site-header.floating .logo img { width: 68px; height: 68px; } }
+  @media (max-width: 700px) { .site-header { padding: 10px 16px; } .logo img { width: 112px; height: 112px; } .site-header.floating .logo img { width: 88px; height: 88px; } }
   @media (prefers-reduced-motion: reduce) { .logo, .logo img, .burger { transition: none; } }
 </style>
