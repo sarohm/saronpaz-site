@@ -8,6 +8,17 @@
     "NewMediaArt",
     "PlaceMaking"
   ],
+  "heroTitles": [
+    "ChangeAgent",
+    "ExperienceDesigner",
+    "NewMediaArtist",
+    "CreativeEngager",
+    "DreamWeaver",
+    "ContextualIdealist",
+    "TechEvangelist",
+    "InteractionTinkerer",
+    "PlaceMaker"
+  ],
   "hero": [
     "/images/home/hero-00.webp",
     "/images/home/hero-01.webp",

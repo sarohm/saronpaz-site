@@ -32,7 +32,7 @@ const heroB = site.hero.filter((_: string, i: number) => i % 2 === 1);
   </section>
   {/* The titles float near the name and fade out one by one while scrolling; all are gone when the projects start. */}
   <p class="floaters">
-    {site.heroLines.slice(1).map((l: string, i: number) => <span class="floater" data-i={i}><span class="drift">{l}</span></span>)}
+    {site.heroTitles.map((l: string, i: number) => <span class="floater" data-i={i}><span class="drift">{l}</span></span>)}
   </p>
 
   <section class="about">
@@ -96,21 +96,27 @@ const heroB = site.hero.filter((_: string, i: number) => i % 2 === 1);
   // Floating titles. Each is placed at a spot around the name (as fractions of the name's box, measured with the page at the top),
   // then fades out in turn as the page scrolls; the last one is gone when the first projects grid reaches the screen.
   const floaters = [...document.querySelectorAll<HTMLElement>('.floater')];
-  // x, y: fractions of the name's box; all three drift in the open space beside "Paz", loosely staggered.
-  const spots = [ { x: 0.53, y: 0.54 }, { x: 0.62, y: 0.71 }, { x: 0.5, y: 0.88 } ];
+  // x, y: where each title starts, as fractions of the hero row (images + name). Titles fade out in this order.
+  const spots = [
+    { x: 0.03, y: 0.08 }, { x: 0.80, y: 0.50 }, { x: 0.33, y: 0.22 },
+    { x: 0.86, y: 0.67 }, { x: 0.10, y: 0.55 }, { x: 0.40, y: 0.62 },
+    { x: 0.84, y: 0.86 }, { x: 0.20, y: 0.90 }, { x: 0.40, y: 0.98 },
+  ];
   const projects = document.querySelector<HTMLElement>('[data-grid]');
   let end = 1;
   const place = () => {
-    const r = title.getBoundingClientRect();
-    const top0 = r.top + scrollY;
-    const fs = Math.max(18, parseFloat(getComputedStyle(title).fontSize) * 0.24);
+    const r = hero.getBoundingClientRect();
+    const pad = parseFloat(getComputedStyle(hero).paddingLeft);
+    const top = r.top + scrollY + parseFloat(getComputedStyle(hero).paddingTop);
+    const box = { left: r.left + pad, width: r.width - 2 * pad, top, height: r.bottom + scrollY - top };
+    const fs = Math.max(16, parseFloat(getComputedStyle(title).fontSize) * 0.17);
     floaters.forEach((f, i) => {
       const s = spots[i % spots.length];
       f.style.setProperty('--fs', fs + 'px');
       const w = f.offsetWidth;
-      const x = Math.min(Math.max(8, r.left + s.x * r.width), innerWidth - w - 8);
+      const x = Math.min(Math.max(8, box.left + s.x * box.width), innerWidth - w - 24);
       f.dataset.x = String(x);
-      f.dataset.y = String(top0 + s.y * r.height - fs / 2);
+      f.dataset.y = String(box.top + s.y * box.height - fs / 2);
     });
     end = Math.max(200, (projects ? projects.getBoundingClientRect().top + scrollY : innerHeight * 2) - innerHeight * 0.8);
     onScroll();
@@ -165,8 +171,8 @@ const heroB = site.hero.filter((_: string, i: number) => i % 2 === 1);
   .floater { position: fixed; left: 0; top: 0; z-index: 25; pointer-events: none; white-space: nowrap; color: #fff; mix-blend-mode: difference;
     font-family: var(--serif); font-weight: 900; letter-spacing: -.02em; line-height: 1; font-size: var(--fs, 32px); will-change: opacity, transform; }
   .drift { display: inline-block; animation: drift 9s ease-in-out infinite alternate; }
-  .floater[data-i='1'] .drift { animation-duration: 11s; animation-delay: -4s; }
-  .floater[data-i='2'] .drift { animation-duration: 13s; animation-delay: -7s; }
+  .floater:nth-child(3n+2) .drift { animation-duration: 11s; animation-delay: -4s; }
+  .floater:nth-child(3n) .drift { animation-duration: 13s; animation-delay: -7s; animation-direction: alternate-reverse; }
   @keyframes drift {
     0% { transform: translate(0, 0) rotate(-2deg); }
     50% { transform: translate(14px, -10px) rotate(1deg); }
