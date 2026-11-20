@@ -28,10 +28,12 @@ const heroB = site.hero.filter((_: string, i: number) => i % 2 === 1);
         </div>
       ))}
     </div>
-    <h1 class="hero-title">
-      {site.heroLines.map((l: string, i: number) => <span class={i === 0 ? 'name' : ''}>{l}</span>)}
-    </h1>
+    <h1 class="hero-title"><span>Saron</span><span>Paz</span></h1>
   </section>
+  {/* The titles float near the name and fade out one by one while scrolling; all are gone when the projects start. */}
+  <p class="floaters">
+    {site.heroLines.slice(1).map((l: string, i: number) => <span class="floater" data-i={i}><span class="drift">{l}</span></span>)}
+  </p>
 
   <section class="about">
     <div class="wrap">
@@ -90,9 +92,48 @@ const heroB = site.hero.filter((_: string, i: number) => i % 2 === 1);
     const k = (W - colGap - frameGap) / (2 * b + a);
     title.style.setProperty('--k', k.toFixed(2) + 'px');
   };
-  fit();
-  document.fonts.ready.then(fit);
-  addEventListener('resize', fit);
+
+  // Floating titles. Each is placed at a spot around the name (as fractions of the name's box, measured with the page at the top),
+  // then fades out in turn as the page scrolls; the last one is gone when the first projects grid reaches the screen.
+  const floaters = [...document.querySelectorAll<HTMLElement>('.floater')];
+  // x, y: fractions of the name's box; all three drift in the open space beside "Paz", loosely staggered.
+  const spots = [ { x: 0.53, y: 0.54 }, { x: 0.62, y: 0.71 }, { x: 0.5, y: 0.88 } ];
+  const projects = document.querySelector<HTMLElement>('[data-grid]');
+  let end = 1;
+  const place = () => {
+    const r = title.getBoundingClientRect();
+    const top0 = r.top + scrollY;
+    const fs = Math.max(18, parseFloat(getComputedStyle(title).fontSize) * 0.24);
+    floaters.forEach((f, i) => {
+      const s = spots[i % spots.length];
+      f.style.setProperty('--fs', fs + 'px');
+      const w = f.offsetWidth;
+      const x = Math.min(Math.max(8, r.left + s.x * r.width), innerWidth - w - 8);
+      f.dataset.x = String(x);
+      f.dataset.y = String(top0 + s.y * r.height - fs / 2);
+    });
+    end = Math.max(200, (projects ? projects.getBoundingClientRect().top + scrollY : innerHeight * 2) - innerHeight * 0.8);
+    onScroll();
+  };
+  const onScroll = () => {
+    // measured on every scroll, since images loading above the grid can move it
+    if (projects) end = Math.max(200, projects.getBoundingClientRect().top + scrollY - innerHeight * 0.8);
+    const p = Math.min(1, Math.max(0, scrollY / end));
+    const n = floaters.length;
+    floaters.forEach((f, i) => {
+      // title i fades during its own slice of the scroll: [i/n, (i+1)/n]
+      const t = Math.min(1, Math.max(0, (p / 0.95) * n - i));
+      f.style.opacity = String(1 - t);
+      f.style.visibility = t >= 1 ? 'hidden' : 'visible';
+      f.style.transform = `translate(${f.dataset.x}px, ${parseFloat(f.dataset.y!) - t * 40}px)`;
+      f.style.filter = t > 0 ? `blur(${(t * 6).toFixed(1)}px)` : '';
+    });
+  };
+  const layout = () => { fit(); place(); };
+  layout();
+  document.fonts.ready.then(layout);
+  addEventListener('resize', layout);
+  addEventListener('scroll', onScroll, { passive: true });
 
   // Slow crossfade between hero portraits (skipped for people who prefer less motion).
   if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -117,9 +158,21 @@ const heroB = site.hero.filter((_: string, i: number) => i % 2 === 1);
   .frame img.on { opacity: 1; }
   /* text-box trims the space above the capitals and below the baseline, so the letters line up with the image edges. */
   .hero-title { --k: clamp(30px, 3.9vw, 64px); margin: 0; text-align: left; font-family: var(--serif); font-weight: 900; line-height: .98; letter-spacing: -.02em; font-size: var(--k); text-box: trim-both cap alphabetic; }
-  .hero-title span { display: block; font-size: 1em; }
-  .hero-title .name { font-size: 1.4em; }
-  .hero-title span:nth-child(2) { font-size: .75em; }
+  .hero-title span { display: block; }
+
+  /* Floating titles: fixed to the screen, placed by the script around the name, faded by scroll position. */
+  .floaters { margin: 0; }
+  .floater { position: fixed; left: 0; top: 0; z-index: 25; pointer-events: none; white-space: nowrap; color: #fff; mix-blend-mode: difference;
+    font-family: var(--serif); font-weight: 900; letter-spacing: -.02em; line-height: 1; font-size: var(--fs, 32px); will-change: opacity, transform; }
+  .drift { display: inline-block; animation: drift 9s ease-in-out infinite alternate; }
+  .floater[data-i='1'] .drift { animation-duration: 11s; animation-delay: -4s; }
+  .floater[data-i='2'] .drift { animation-duration: 13s; animation-delay: -7s; }
+  @keyframes drift {
+    0% { transform: translate(0, 0) rotate(-2deg); }
+    50% { transform: translate(14px, -10px) rotate(1deg); }
+    100% { transform: translate(-10px, 8px) rotate(-1deg); }
+  }
+  @media (prefers-reduced-motion: reduce) { .drift { animation: none; } }
 
   .about { background: var(--soft); padding: 110px 0 100px; text-align: center; }
   .about-title { font-family: var(--sans); font-weight: 600; letter-spacing: .2em; text-transform: uppercase; font-size: 29px; margin: 0 0 22px; }
@@ -140,7 +193,7 @@ const heroB = site.hero.filter((_: string, i: number) => i % 2 === 1);
 
   @media (max-width: 1000px) {
     .hero { grid-template-columns: 1fr; gap: 40px; }
-    .hero-title { --k: clamp(34px, 9vw, 72px) !important; }
+    .hero-title { --k: clamp(64px, 24vw, 140px) !important; }
     .services { grid-template-columns: 1fr; gap: 30px; }
     .services-title { text-align: left; font-size: clamp(54px, 15vw, 72px); }
   }
