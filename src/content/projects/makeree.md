@@ -1,7 +1,7 @@
 ---
 title: "Makeree"
 subtitle: "Become a maker"
-section: "experiments"
+section: "expeditions"
 order: 47
 category: "Platforms"
 experiences: ["Learning X", "Creative X", "Tech X"]
