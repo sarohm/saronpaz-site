@@ -1,7 +1,7 @@
 ---
 title: "MusraraMix"
 subtitle: ""
-section: "experiences"
+section: "expeditions"
 order: 8
 category: "Events"
 experiences: ["Event X", "Public X", "Space X", "Creative X", "Social X", "Historical X", "Cultural X"]
