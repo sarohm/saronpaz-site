@@ -50,6 +50,16 @@
     "pitchTitle": "Start your Project",
     "pitch": "We thrive when coming up with innovative ideas but also understand that a smart concept should be supported with measurable results."
   },
+  "social": [
+    {
+      "label": "YouTube · ForReal Team",
+      "url": "https://www.youtube.com/@forrealteam169"
+    },
+    {
+      "label": "YouTube · ForRealTime",
+      "url": "https://www.youtube.com/@forrealtime7687"
+    }
+  ],
   "sections": [
     {
       "id": "experiences",

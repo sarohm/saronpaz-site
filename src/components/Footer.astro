@@ -15,6 +15,11 @@ const c = site.contact;
       <p><a href={`tel:${c.phone.replace(/[^+\d]/g, '').replace('+9720', '+972')}`}>{c.phone}</a></p>
       <p><a class="mail" href={`mailto:${c.email}`}>{c.email}</a></p>
       <a class="btn" href={`mailto:${c.email}?subject=${encodeURIComponent('Hello from saronpaz.com')}`}>Write to us</a>
+      {site.social?.length > 0 && (
+        <ul class="social" role="list">
+          {site.social.map((s: { label: string; url: string }) => <li><a href={s.url} target="_blank" rel="noopener me">{s.label}</a></li>)}
+        </ul>
+      )}
     </div>
   </div>
   <p class="copy">© {new Date().getFullYear()} Saron Paz</p>
@@ -31,6 +36,9 @@ const c = site.contact;
   .mail { border-bottom: 1px solid #ccc; }
   .btn { display: inline-block; margin-top: 18px; background: var(--ink); color: #fff; padding: 12px 26px; font-family: var(--sans); font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; border-radius: 2px; }
   .btn:hover { background: #000; }
+  .social { list-style: none; margin: 28px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px 26px; }
+  .social a { font-family: var(--sans); font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--ink); border-bottom: 1px solid #ccc; padding-bottom: 3px; }
+  .social a:hover { border-bottom-color: var(--ink); }
   .copy { text-align: center; font-size: 12px; margin-top: 72px; }
   @media (max-width: 800px) { .grid { grid-template-columns: 1fr; gap: 36px; } }
 </style>
