@@ -1,7 +1,7 @@
 ---
 title: "Jerusalem Mini Maker Faire"
 subtitle: ""
-section: "experiences"
+section: "expeditions"
 order: 2
 category: "Events"
 experiences: ["Public X", "Tech X", "Learning X", "Social X", "Event X"]
