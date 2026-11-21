@@ -10,9 +10,6 @@ const c = site.contact;
       <p>{site.talkToUs}</p>
     </div>
     <div class="contact">
-      <p class="eyebrow">{c.city}</p>
-      <p>{c.address}</p>
-      <p><a href={`tel:${c.phone.replace(/[^+\d]/g, '').replace('+9720', '+972')}`}>{c.phone}</a></p>
       <p><a class="mail" href={`mailto:${c.email}`}>{c.email}</a></p>
       <a class="btn" href={`mailto:${c.email}?subject=${encodeURIComponent('Hello from saronpaz.com')}`}>Write to us</a>
       {site.social?.length > 0 && (
