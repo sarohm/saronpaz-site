@@ -11,7 +11,7 @@ year: "2017"
 thumb: "/images/doppelganger/thumb.webp"
 header: "/images/doppelganger/header.webp"
 videos: ["gI6PaABY3XQ", "funwBjEWyzM", "6y94BdW1LPs", "_sOdmaZ3HJs"]
-gallery: []
+gallery: ["/images/doppelganger/001.webp", "/images/doppelganger/002.webp", "/images/doppelganger/003.webp", "/images/doppelganger/004.webp", "/images/doppelganger/005.webp", "/images/doppelganger/006.webp", "/images/doppelganger/007.webp", "/images/doppelganger/008.webp"]
 ---
 DoppelGänger is an exploration of a dynamic link between virtual an physical identities through the examination of human robot kinetic interaction.
 
