@@ -1,8 +1,8 @@
 ---
 title: "GrandGesture"
 subtitle: "Navigating with your hands"
-section: "experiments"
-order: 24
+section: "experiences"
+order: 4
 category: "Interfaces"
 experiences: ["Tech X", "User X"]
 tags: ["Tech X", "User X"]
