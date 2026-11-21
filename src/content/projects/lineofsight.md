@@ -10,7 +10,7 @@ client: ""
 year: ""
 thumb: "/images/lineofsight/thumb.webp"
 header: "/images/lineofsight/header.webp"
-videos: ["lH56YmWOz-o"]
+videos: ["playlist:PLVFHt_u7b7bH2rxXlohGYBSD9CLe1x68O"]
 gallery: []
 ---
 LineOfSight is a dynamic light installation. Using an individually addressable programmable light string and a proprietary mapping software LineOfSight can create diverse shaped screens. After a careful calibration process images and videos can be projected and viewed fully only from a specific perspective point of view.
