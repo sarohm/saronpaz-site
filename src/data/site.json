@@ -77,6 +77,15 @@
     {
       "id": "expeditions",
       "title": "Expeditions"
+    },
+    {
+      "id": "mondaymakers",
+      "title": "mondayMakers",
+      "intro": "Our work environment shapes our everyday experience, productivity and well-being. At mondayMakers, the makers team at monday.com, we turn workspaces into dynamic, human-centred environments, blending the physical and digital to create smart-office devices that translate company culture into real-life experiences and real-time data.",
+      "link": {
+        "label": "monday.com/lp/makers",
+        "url": "https://monday.com/lp/makers"
+      }
     }
   ],
   "talented": [
@@ -251,6 +260,15 @@
       "items": [
         "page:meanstonoend",
         "misuse"
+      ]
+    },
+    {
+      "title": "mondayMakers",
+      "items": [
+        "focustime",
+        "lighthouse",
+        "timeline",
+        "robogong"
       ]
     },
     {

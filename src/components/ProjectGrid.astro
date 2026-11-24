@@ -2,15 +2,16 @@
 import { u } from '../lib/url';
 // A section of the homepage: giant title, tag filters, and a masonry grid of projects.
 interface Item { id: string; data: { title: string; thumb: string; tags: string[] } }
-interface Props { id: string; title: string; items: Item[] }
+interface Props { id: string; title: string; items: Item[]; intro?: string; link?: { label: string; url: string } }
 import site from '../data/site.json';
-const { id, title, items } = Astro.props;
+const { id, title, items, intro, link } = Astro.props;
 const rank = (t: string) => { const i = site.tagOrder.indexOf(t); return i < 0 ? 999 : i; };
 const tags = [...new Set(items.flatMap((p) => p.data.tags))].sort((a, b) => rank(a) - rank(b));
 const slugify = (t: string) => t.toLowerCase().replace(/\W+/g, '-');
 ---
 <section class="projects" id={id} data-grid>
   <h2 class="giant">{title}</h2>
+  {intro && <p class="intro">{intro}{link && <> <a href={link.url} target="_blank" rel="noopener">{link.label}</a></>}</p>}
   {tags.length > 1 && (
     <ul class="filters" role="list">
       <li><button class="eyebrow active" data-filter="*">Show all</button></li>
@@ -40,6 +41,8 @@ const slugify = (t: string) => t.toLowerCase().replace(/\W+/g, '-');
 </script>
 
 <style>
+  .intro { font-family: var(--serif); font-size: 19px; color: var(--muted); max-width: 720px; margin: -10px auto 40px; text-align: center; padding: 0 20px; }
+  .intro a { color: var(--ink); border-bottom: 1px solid #ccc; white-space: nowrap; }
   .projects { padding: 110px 0 40px; }
   .filters { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 4px; padding: 0 36px; margin: 34px auto 54px; max-width: 1200px; }
   .filters button { background: none; border: 0; cursor: pointer; color: var(--ink); padding: 6px 9px; }

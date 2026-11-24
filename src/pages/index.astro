@@ -61,8 +61,8 @@ const heroB = site.hero.filter((_: string, i: number) => i % 2 === 1);
     </ul>
   </section>
 
-  {site.sections.map((sec: { id: string; title: string }) => (
-    <ProjectGrid id={sec.id} title={sec.title} items={projects.filter((p) => p.data.section === sec.id)} />
+  {site.sections.map((sec: { id: string; title: string; intro?: string; link?: { label: string; url: string } }) => (
+    <ProjectGrid id={sec.id} title={sec.title} intro={sec.intro} link={sec.link} items={projects.filter((p) => p.data.section === sec.id)} />
   ))}
 
   <Logos id="partners" title="Partners" logos={site.partners} />
