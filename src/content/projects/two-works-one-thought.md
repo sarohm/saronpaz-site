@@ -35,7 +35,7 @@ I'll keep sharing like this from time to time. You're welcome to share thoughts,
 
 <div class="side">
 <a href="/portfolio/storystore/"><img src="/images/storystore/001.webp" alt="StoryStore" /></a>
-<a href="/portfolio/piecederesistance/"><img src="/images/piecederesistance/001.webp" alt="PièceDeRésistance" /></a>
+<a href="/portfolio/piecederesistance/"><img src="/images/piecederesistance/002.webp" alt="PièceDeRésistance" /></a>
 </div>
 
 During an artists' meeting in Lod, and while rummaging through my digital archives lately, my preoccupation with stories suddenly came up. An experience is a matter of a moment, a collection of sensory input along the timeline, but the stories we form after it, with a beginning, a middle and an end, are the very memory we carry with us, share about the world, and build our identity from, along with the way we choose to act in reality afterwards.
