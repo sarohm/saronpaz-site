@@ -77,6 +77,10 @@
     {
       "id": "expeditions",
       "title": "Expeditions"
+    },
+    {
+      "id": "introspection",
+      "title": "Introspection"
     }
   ],
   "talented": [
@@ -252,6 +256,12 @@
       "items": [
         "page:meanstonoend",
         "misuse"
+      ]
+    },
+    {
+      "title": "Introspection",
+      "items": [
+        "kids-ai-era"
       ]
     },
     {
