@@ -11,7 +11,7 @@ year: "2011"
 thumb: "/images/piecederesistance/thumb.webp"
 header: "/images/piecederesistance/header.webp"
 videos: ["vimeo:32685553"]
-gallery: ["/images/piecederesistance/001.webp"]
+gallery: ["/images/piecederesistance/001.webp", "/images/piecederesistance/002.webp", "/images/piecederesistance/003.webp", "/images/piecederesistance/004.webp", "/images/piecederesistance/005.webp", "/images/piecederesistance/006.webp"]
 ---
 PièceDeRésistance is an experience of objects and stories.
 
