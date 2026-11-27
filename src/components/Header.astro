@@ -74,7 +74,8 @@ const menu = site.menu.map((g: any) => ({
   .logo img { width: 160px; height: 160px; object-fit: contain; transition: width .3s, height .3s; }
   .burger { background: none; border: 0; cursor: pointer; padding: 12px; display: grid; gap: 4px; border-radius: 2px; transition: background .3s, box-shadow .3s; }
   /* Once the page has scrolled, the logo shrinks a little and the menu button sits on a small white backing. */
-  .site-header.floating .logo img { width: 124px; height: 124px; }
+  .site-header.floating .logo img { width: 92px; height: 92px; }
+  .site-header.floating .logo { background: rgba(255,255,255,.92); box-shadow: 0 4px 18px rgba(0,0,0,.08); border-radius: 2px; }
   .site-header.floating .burger { background: rgba(255,255,255,.92); box-shadow: 0 4px 18px rgba(0,0,0,.08); }
   .site-header.floating .logo:hover { transform: rotate(-8deg) scale(1.05); }
   .burger span { display: block; width: 20px; height: 2px; background: var(--ink); }

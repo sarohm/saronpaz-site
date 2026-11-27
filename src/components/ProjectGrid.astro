@@ -22,7 +22,7 @@ const slugify = (t: string) => t.toLowerCase().replace(/\W+/g, '-');
     {items.map((p) => (
       <a class="card" href={u(`/portfolio/${p.id}/`)} data-tags={p.data.tags.map(slugify).join(' ')}>
         {p.data.thumb && <img src={u(p.data.thumb)} alt="" loading="lazy" decoding="async" />}
-        <h3>{p.data.title}</h3>
+        <h3 dir="auto">{p.data.title}</h3>
       </a>
     ))}
   </div>
@@ -48,7 +48,7 @@ const slugify = (t: string) => t.toLowerCase().replace(/\W+/g, '-');
   .filters button { background: none; border: 0; cursor: pointer; color: var(--ink); padding: 6px 9px; }
   .filters button.active, .filters button:hover { color: #999; }
   .masonry { columns: 6 170px; column-gap: 36px; padding: 0 36px; }
-  .card { display: block; break-inside: avoid; margin-bottom: 36px; }
+  .card { display: block; break-inside: avoid; margin-bottom: 48px; }
   .card[hidden] { display: none; }
   .card img { width: 100%; transition: opacity .25s, transform .4s; }
   .card:hover img { opacity: .82; }
